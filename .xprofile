@@ -1,6 +1,9 @@
 # networkmanager
 nm-applet &
 
+# tray-icon for updates
+pamac-tray &
+
 # bspwm fix for jdownloader
 wmname LG3D
 
