@@ -1,0 +1,14 @@
+# networkmanager
+nm-applet &
+
+# bspwm fix for jdownloader
+wmname LG3D
+
+# email client
+thunderbird &
+
+# chat client
+rambox &
+
+# status bar
+polybar top &
