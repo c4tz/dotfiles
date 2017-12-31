@@ -53,6 +53,11 @@ scroll-down = bspwm-desknext
 bspwm-focused-overline = ${colors.linecolor}
 bspwm-focused-underline = #cc333333
 
+[bar/top-work]
+inherit = bar/top
+monitor = ${env:MONITOR:eDP-1}
+modules-left = volume wifi fs cpu memory
+
 [module/fs]
 type = internal/fs
 interval = 5
@@ -75,12 +80,11 @@ format-prefix-foreground = #666
 
 [module/wifi]
 type = internal/network
-interface = net1
+interface = wlp1s0
 interval = 3.0
 ;udspeed-minwidth = 0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-prefix = " "
 format-connected-prefix-foreground = #666
 format-connected-prefix-offset = -6
 label-connected = %downspeed:8%
