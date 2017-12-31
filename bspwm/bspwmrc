@@ -38,7 +38,7 @@ if [[ $(hostname) == 'pc' ]]; then
 	feh --bg-fill $WP $WP $WP
 fi
 
-if [[ $(hostname) == 'pc' ]]; then
+if [[ $(hostname) == 'laptop' ]]; then
     xrandr \
 		--output eDP-1 --mode 1920x1080 --rate 143.91 --primary --pos 0x0 \
 		--output HDMI-1 --mode 2560x1080 --pos 1080x0
