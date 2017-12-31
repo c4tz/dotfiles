@@ -7,7 +7,6 @@ fi
 
 # x settings
 xsetroot -cursor_name left_ptr &
-source ~/.xprofile &
 
 compton -b --vsync opengl
 sxhkd &
