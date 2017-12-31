@@ -43,6 +43,10 @@ XF86Audio{Raise,Lower}Volume
 control + super + q
     zenity --question --text="Shutdown?" && shutdown now
 
+# shutdown NAS + PC
+control + super + shift + q
+	xfce4-terminal -e "ssh root@192.168.1.2 shutdown now && shutdown now"
+
 # reboot
 control + super + r
     zenity --question --text="Reboot?" && shutdown -r now
