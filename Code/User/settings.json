@@ -7,7 +7,7 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
-        "suppressUpdateNotice": false,
+        "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
     "workbench.colorTheme": "lioshi theme",
