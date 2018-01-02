@@ -28,8 +28,6 @@ if [[ $(hostname) == 'pc' ]]; then
 	bspc monitor DVI-D-0 -d 1 2 3
 	bspc monitor DP-4 -d 4 5 6
 	bspc monitor HDMI-0 -d 7 8 9
-	
-	bspc config -m HDMI-0 top_padding 250
 
 	bspc rule -a Chromium desktop='^1' state=fullscreen
 	bspc rule -a Rambox desktop='^7' state=floating
