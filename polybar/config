@@ -56,7 +56,7 @@ bspwm-focused-underline = #cc333333
 [bar/top-work]
 inherit = bar/top
 monitor = ${env:MONITOR:eDP-1}
-modules-left = volume wifi fs cpu memory
+modules-left = volume wifi fs cpu memory battery
 
 [module/fs]
 type = internal/fs
@@ -159,6 +159,32 @@ ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-3 = 
 ramp-volume-foreground = #666
+
+[module/battery]
+type = internal/battery
+full-at = 98
+time-format = %H:%M
+
+format-charging = <animation-charging> <label-charging>
+label-charging = %percentage%% (%time%)
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = %percentage%% (%time%)
+
+format-full = <label-full>
+format-full-prefix = " "
+format-full-prefix-foreground = #666
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = #666
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = #666
+animation-charging-framerate = 750
 
 [module/xwindow]
 type = internal/xwindow
