@@ -33,7 +33,7 @@ super + Escape
 
 # lock the screen
 super + l
-	light-locker-command -l
+	~/.dotfiles/i3lock/lock.sh
 
 # volume
 XF86Audio{Raise,Lower}Volume

@@ -7,10 +7,26 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
         "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
     "workbench.colorTheme": "lioshi theme",
     "docker.showExplorer": false,
-    "explorer.openEditors.visible": 0
+    "explorer.openEditors.visible": 0,
+    "explorer.confirmDelete": false,
+    "extensions.ignoreRecommendations": false,
+    "python.disablePromptForFeatures": [
+        "pylint"
+    ],
+    "editor.rulers": [
+        80
+    ],
+    "editor.wordWrap": "on",
+    "editor.fontFamily": "'Hack'",
+    "gitlens.keymap": "alternate",
+    "window.zoomLevel": 0,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.historyExplorer.enabled": true
 }
