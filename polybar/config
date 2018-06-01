@@ -36,10 +36,11 @@ module-margin-right = 0
 font-0 = dina:pixelsize=9;1
 font-1 = "Wuncon Siji:pixelsize=10;2"
 font-2 = unifont:size=6;1
+font-3 = cryptocoins:size=8:style=Regular;3
 
 modules-left = volume traffic vpn fs cpu memory
 modules-center = xwindow
-modules-right = music weather date
+modules-right = crypto music weather date
 
 tray-position = right
 tray-padding = 4
@@ -107,6 +108,12 @@ label-connected = %{F#666}%{F-}%downspeed:9% %{F#666}%{F-}%upspeed:9%
 format-disconnected = <label-disconnected>
 label-disconnected = not connected
 
+[module/crypto]
+type = custom/script
+interval = 30
+label = %{F#666}%{T4}%{T-}%{F-} %output%
+exec = curl -s "https://api.coinmarketcap.com/v1/ticker/bitcoin/" | jq -r '.[0] | .price_usd + "$ (" + .percent_change_24h + "%)"'
+
 [module/vpn]
 type = custom/script
 exec = curl -s https://4.ifcfg.me/country_code
@@ -120,19 +127,12 @@ exec = python ~/projects/weather.py
 interval = 300
 label = %{F#666}%{F-} %output%
 
-[module/eth]
-type = custom/script
-exec = python ~/projects/crypto.py ETH value
-interval = 300
-label = %{F#666}%{F-} %output%
-
 [module/music]
 type = custom/script
 exec = python ~/projects/player.py
 exec-if = python ~/projects/player.py
 interval = 5
 label = %{F#666}%{F-} %output%
-
 
 [module/date]
 type = internal/date

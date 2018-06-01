@@ -93,6 +93,8 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+eval "$(direnv hook zsh)"
+
 # auto startx if display is not set
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec startx

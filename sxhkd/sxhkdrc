@@ -33,7 +33,7 @@ super + Escape
 
 # lock the screen
 super + l
-	light-locker-command -l
+	i3lock-next
 
 # volume
 XF86Audio{Raise,Lower}Volume
@@ -45,7 +45,7 @@ control + super + q
 
 # shutdown NAS + PC
 control + super + shift + q
-	xfce4-terminal -e "ssh root@192.168.1.2 shutdown now && shutdown now"
+	ssh -i ~/.ssh/rsync/id_rsa root@192.168.1.2 shutdown now; shutdown now
 
 # reboot
 control + super + r
