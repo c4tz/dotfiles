@@ -33,7 +33,7 @@ super + Escape
 
 # lock the screen
 super + l
-	i3lock-next
+	~/.dotfiles/i3lock/lock.sh
 
 # volume
 XF86Audio{Raise,Lower}Volume

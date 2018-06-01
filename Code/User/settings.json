@@ -15,12 +15,19 @@
     "workbench.colorTheme": "lioshi theme",
     "docker.showExplorer": false,
     "explorer.openEditors.visible": 0,
+    "explorer.confirmDelete": false,
+    "extensions.ignoreRecommendations": false,
+    "python.disablePromptForFeatures": [
+        "pylint"
+    ],
     "editor.rulers": [
         80
     ],
     "editor.wordWrap": "on",
     "explorer.confirmDragAndDrop": false,
     "editor.fontFamily": "'Hack'",
+    "gitlens.keymap": "alternate",
+    "window.zoomLevel": 0,
     "extensions.ignoreRecommendations": false,
     "gitlens.codeLens.enabled": false,
     "gitlens.keymap": "alternate",

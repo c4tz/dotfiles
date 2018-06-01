@@ -39,15 +39,15 @@ fi
 
 if [[ $(hostname) == 'laptop' ]]; then
     xrandr \
-		--output eDP-1 --mode 1920x1080 --rate 143.91 --primary --pos 0x0 \
-		--output HDMI-1 --mode 2560x1080 --pos 1920x0
+		--output eDP1 --mode 1920x1080 --rate 143.91 --primary --pos 0x0 \
+		--output HDMI1 --mode 2560x1080 --pos 1920x0 \
+		--output DVI-I-1-1 --mode 1680x1050 --pos 4480x0
     
-	bspc monitor eDP-1 -d 1 2 3
-	bspc monitor HDMI-1 -d 4 5 6
+	bspc monitor eDP1 -d 1 2 3
+	bspc monitor HDMI1 -d 4 5 6
+	bspc monitor DVI-I-1-1 -d 7 8 9
 
-	bspc rule -a Chromium desktop='^4'
 	bspc rule -a Rambox desktop='^1' state=floating
-	bspc rule -a Code desktop='^4'
 
 	feh --bg-fill $WP $WP
 fi
