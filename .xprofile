@@ -18,3 +18,6 @@ polybar top &
 
 # usenet client daemon
 nzbget -D
+
+# ethereum wallet
+parity --light --max-pending-peers 30 --max-peers 10
