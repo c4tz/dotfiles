@@ -5,9 +5,21 @@ tmpbg='/tmp/screen.png'
 
 (( $# )) && { icon=$1; }
 
+if [[ $(hostname) == 'pc' ]]; then
+    geometry='+2242+732'
+    screen=1
+    radius=127
+fi
+
+if [[ $(hostname) == 'laptop' ]]; then
+    geometry='+3082+422'
+    screen=2
+    radius=123
+fi
+
 scrot "$tmpbg"
 convert "$tmpbg" -scale 10% -scale 1000% "$tmpbg"
-convert "$tmpbg" "$icon" -geometry +3082+422 -composite -matte "$tmpbg"
+convert "$tmpbg" "$icon" -geometry $geometry -composite -matte "$tmpbg"
 
 i3lock -i "$tmpbg"           \
 --insidevercolor=#ffffff00   \
@@ -26,8 +38,8 @@ i3lock -i "$tmpbg"           \
 --keyhlcolor=#00DBF1ff       \
 --bshlcolor=#00DBF1ff        \
 --ring-width=10              \
---screen=2                   \
---radius=123                 \
+--screen=$screen             \
+--radius=$radius             \
 --veriftext=""               \
 --wrongtext=""               \
 --noinputtext=""             \
