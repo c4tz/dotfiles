@@ -2,7 +2,7 @@
 nm-applet &
 
 # auto-lock screen
-xautolock -time 10 -locker "~/.dotfiles/i3lock/lock.sh" &
+xautolock -time 5 -locker "~/.dotfiles/i3lock/lock.sh" &
 
 # tray-icon for updates
 pamac-tray &
@@ -17,7 +17,7 @@ thunderbird &
 rambox &
 
 # status bar
-polybar top &
+polybar top-work &
 
 # usenet client daemon
 nzbget -D
