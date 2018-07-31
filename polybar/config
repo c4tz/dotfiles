@@ -38,7 +38,7 @@ font-1 = "Wuncon Siji:pixelsize=10;2"
 font-2 = unifont:size=6;1
 font-3 = cryptocoins:size=8:style=Regular;3
 
-modules-left = volume traffic vpn fs cpu memory
+modules-left = volume traffic fs cpu memory vpn
 modules-center = xwindow
 modules-right = crypto music weather date
 
@@ -58,6 +58,7 @@ bspwm-focused-underline = #cc333333
 inherit = bar/top
 monitor = ${env:MONITOR:HDMI-1}
 modules-left = volume wifi fs cpu memory battery
+modules-right = led crypto music weather date 
 
 [module/fs]
 type = internal/fs
@@ -116,23 +117,32 @@ exec = curl -s "https://api.coinmarketcap.com/v1/ticker/bitcoin/" | jq -r '.[0] 
 
 [module/vpn]
 type = custom/script
-exec = curl -s https://4.ifcfg.me/country_code
+exec = curl -s "http://ip-api.com/json" | jq -r '.country'
 exec-if = pgrep -x openvpn
-interval = 5
+interval = 10
 label = %{F#666}%{F-} %output%
 
 [module/weather]
 type = custom/script
-exec = python ~/projects/weather.py
+exec = python ~/.dotfiles/scripts/weather.py
 interval = 300
 label = %{F#666}%{F-} %output%
 
 [module/music]
 type = custom/script
-exec = python ~/projects/player.py
-exec-if = python ~/projects/player.py
+exec = python ~/.dotfiles/scripts/player.py
+exec-if = python ~/.dotfiles/scripts/player.py
 interval = 5
 label = %{F#666}%{F-} %output%
+
+[module/led]
+type = custom/ipc
+hook-0 = python ~/.dotfiles/scripts/led.py green
+hook-1 = python ~/.dotfiles/scripts/led.py red
+format = %{F#<output>}%{F-}
+click-left = polybar-msg hook led 1
+click-right = polybar-msg hook led 2
+initial = 1
 
 [module/date]
 type = internal/date
