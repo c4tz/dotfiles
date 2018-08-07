@@ -2,7 +2,7 @@
 nm-applet &
 
 # auto-lock screen
-xautolock -time 5 -locker "~/.dotfiles/i3lock/lock.sh" &
+xautolock -time 5 -locker "~/.scripts/lock.sh" &
 
 # tray-icon for updates
 pamac-tray &

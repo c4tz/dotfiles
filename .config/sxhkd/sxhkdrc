@@ -23,9 +23,9 @@ alt + Tab
 
 # sound script
 ctrl + shift + h
-	~/.sound.sh headset
+	~/.scripts/sound.sh headset
 ctrl + shift + l
-	~/.sound.sh speakers
+	~/.scripts/sound.sh speakers
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -33,7 +33,7 @@ super + Escape
 
 # lock the screen
 super + l
-	~/.dotfiles/i3lock/lock.sh
+	~/.scripts/lock.sh
 
 # volume
 XF86Audio{Raise,Lower}Volume

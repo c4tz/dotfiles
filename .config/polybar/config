@@ -124,21 +124,21 @@ label = %{F#666}%{F-} %output%
 
 [module/weather]
 type = custom/script
-exec = python ~/.dotfiles/scripts/weather.py
+exec = python ~/.scripts/weather.py
 interval = 300
 label = %{F#666}%{F-} %output%
 
 [module/music]
 type = custom/script
-exec = python ~/.dotfiles/scripts/player.py
-exec-if = python ~/.dotfiles/scripts/player.py
+exec = python ~/.scripts/player.py
+exec-if = python ~/.scripts/player.py
 interval = 5
 label = %{F#666}%{F-} %output%
 
 [module/led]
 type = custom/ipc
-hook-0 = python ~/.dotfiles/scripts/led.py green
-hook-1 = python ~/.dotfiles/scripts/led.py red
+hook-0 = python ~/.scripts/led.py green
+hook-1 = python ~/.scripts/led.py red
 format = %{F#<output>}%{F-}
 click-left = polybar-msg hook led 1
 click-right = polybar-msg hook led 2
