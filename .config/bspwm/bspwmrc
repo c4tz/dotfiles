@@ -33,8 +33,6 @@ if [[ $(hostname) == 'pc' ]]; then
 
 	bspc rule -a Chromium desktop='^1'
 	bspc rule -a Rambox desktop='^7' state=floating
-
-	feh --bg-fill $WP $WP $WP
 fi
 
 if [[ $(hostname) == 'laptop' ]]; then
@@ -48,8 +46,8 @@ if [[ $(hostname) == 'laptop' ]]; then
 	bspc monitor DVI-I-1-1 -d 7 8 9
 
 	bspc rule -a Rambox desktop='^1' state=floating
-
-	feh --bg-fill $WP $WP
 fi
+
+feh --bg-fill $WP $WP $WP
 
 source ~/.xprofile &
