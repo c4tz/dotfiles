@@ -132,7 +132,7 @@ label = %{F#666}%{F-} %output%
 type = custom/script
 exec = python ~/.scripts/imap.py
 interval = 300
-click-left = thunderbird
+click-left = thunderbird &
 
 [module/music]
 type = custom/script
