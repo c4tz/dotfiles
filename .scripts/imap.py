@@ -18,8 +18,9 @@ with open(acc_file, 'r') as f:
     accounts = json.load(f)
 
 unreads = 0
-try:
-    for account in accounts:
+
+for account in accounts:
+    try:
         if account['port'] == 143:
             obj = IMAP4(account['host'], account['port'])
             obj.starttls()
@@ -28,8 +29,8 @@ try:
         obj.login(account['login'], account['password'])
         obj.select()
         unreads += len(obj.search(None, 'unseen')[1][0].split())
-except IMAP4.error:
-    sys.exit('Could not fetch unread mails.')
+    except (OSError, IMAP4.error):
+        sys.exit('Could not fetch unread mails from '+account['host'])
 
 if unreads:
     print('%{F#f44242}%{F-} '+str(unreads))
