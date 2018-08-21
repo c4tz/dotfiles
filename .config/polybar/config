@@ -58,7 +58,7 @@ bspwm-focused-underline = #cc333333
 inherit = bar/top
 monitor = ${env:MONITOR:HDMI-1}
 modules-left = volume wifi fs cpu memory battery
-modules-right = led crypto music weather date 
+modules-right = led mail crypto music weather date 
 
 [module/fs]
 type = internal/fs
