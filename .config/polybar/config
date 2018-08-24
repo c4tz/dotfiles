@@ -113,7 +113,7 @@ label-disconnected = not connected
 type = custom/script
 interval = 30
 label = %{F#666}%{T4}%{T-}%{F-} %output%
-exec = curl -s "https://api.coinmarketcap.com/v1/ticker/bitcoin/" | jq -r '.[0] | .price_usd + "$ (" + .percent_change_24h + "%)"'
+exec = curl -s "https://api.coinmarketcap.com/v1/ticker/bitcoin/" | jq -r '.[0] | "\(.price_usd|tonumber|floor)$ (\(.percent_change_24h)%)"'
 
 [module/vpn]
 type = custom/script
