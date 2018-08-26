@@ -43,6 +43,10 @@ XF86Audio{Raise,Lower}Volume
 control + super + q
     zenity --question --text="Shutdown?" && shutdown now
 
+# standby
+control + super + s
+    zenity --question --text="Standby?" && systemctl suspend && ~/.scripts/lock.sh
+
 # shutdown NAS + PC
 control + super + shift + q
 	ssh -i ~/.ssh/rsync/id_rsa root@192.168.1.2 shutdown now; shutdown now

@@ -31,8 +31,7 @@ if [[ $(hostname) == 'pc' ]]; then
 
 	bspc desktop 1 -l monocle
 
-	bspc rule -a Chromium desktop='^1'
-	bspc rule -a Rambox desktop='^7' state=floating
+	bspc rule -a Rambox desktop='^7' state=floating rectangle=1060x800+10+1110
 fi
 
 if [[ $(hostname) == 'laptop' ]]; then
