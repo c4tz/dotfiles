@@ -26,4 +26,4 @@ $ stow dotfiles
 
 ## Screenshot
 
-![](https://raw.github.com/c4tz/dotfiles/master/screenshot.png "SCREENSHOT")
+![](https://raw.github.com/c4tz/dotfiles/master/screenshot.png)
