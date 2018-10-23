@@ -33,6 +33,6 @@ for account in accounts:
         sys.exit('Could not fetch unread mails from '+account['host'])
 
 if unreads:
-    print('%{F#f44242}%{F-} '+str(unreads))
+    print('%{F#b94646}%{F-} '+str(unreads))
 else:
     print('%{F#666}%{F-}')

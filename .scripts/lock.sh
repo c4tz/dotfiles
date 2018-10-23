@@ -25,7 +25,7 @@ i3lock -i "$tmpbg"           \
 --insidevercolor=#ffffff00   \
 --ringvercolor=#0000bb00     \
 --insidewrongcolor=#CF42C100 \
---ringwrongcolor=#b94660aa   \
+--ringwrongcolor=#b94646aa   \
 --insidecolor=#eeeeee00      \
 --ringcolor=#46b995aa        \
 --linecolor=#319576aa        \
