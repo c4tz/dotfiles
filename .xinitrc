@@ -14,7 +14,7 @@ xrdb -merge "$HOME/.Xresources"
 xset +fp ~/.fonts/dina-powerline
 xset fp rehash
 
-# bspwm stuff
+# wm stuff
 compton -b --vsync opengl
 sxhkd &
 bspwm
