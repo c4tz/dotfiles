@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + t
-	xfce4-terminal
+	urxvt
 
 # browser
 super + w

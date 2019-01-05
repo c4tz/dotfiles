@@ -8,7 +8,13 @@ fi
 # x settings
 xsetroot -cursor_name left_ptr &
 numlockx &
+xrdb -merge "$HOME/.Xresources"
 
+# fonts
+xset +fp ~/.fonts/dina-powerline
+xset fp rehash
+
+# bspwm stuff
 compton -b --vsync opengl
 sxhkd &
 bspwm
