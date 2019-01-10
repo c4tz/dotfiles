@@ -14,7 +14,7 @@ wmname LG3D
 rambox &
 
 # status bar
-polybar top &
+polybar top-work &
 
 # usenet client daemon
 nzbget -D

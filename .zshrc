@@ -95,6 +95,8 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(direnv hook zsh)"
 
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
+
 # auto startx if display is not set
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec startx

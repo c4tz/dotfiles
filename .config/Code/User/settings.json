@@ -38,6 +38,10 @@
         "env"
     ],
     "gitlens.historyExplorer.enabled": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
     "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true
+    "gitlens.views.lineHistory.enabled": true,
+    "terminal.external.linuxExec": "xfce4-terminal",
+    "terminal.explorerKind": "external"
 }
