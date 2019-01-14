@@ -14,7 +14,7 @@ wmname LG3D
 rambox &
 
 # status bar
-if $(cat /etc/hostname) = "laptop" ; then polybar top-work & ; else polybar top & ; fi
+if [[ "$(cat /etc/hostname)" == *"laptop"* ]]; then polybar top-work ; else polybar top ; fi
 
 # usenet client daemon
 nzbget -D
