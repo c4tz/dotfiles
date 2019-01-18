@@ -1,0 +1,10 @@
+[Unit]
+Description=Set specific color on all razer devices
+After=openrazer-daemon.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python %h/.scripts/razer.py
+
+[Install]
+WantedBy=default.target
