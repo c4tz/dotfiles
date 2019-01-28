@@ -19,7 +19,8 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'Valloric/YouCompleteMe',                  { 'do': './install.py' }
 
 " tmux
-" Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'edkolev/tmuxline.vim'
 " Plug 'madnight/vim-tmux-resizer'
 " Plug 'benmills/vimux', { 'on': 'VimuxRunCommand' }
 
