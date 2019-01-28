@@ -15,6 +15,6 @@ xset +fp ~/.fonts/dina-powerline
 xset fp rehash
 
 # wm stuff
-compton -b --vsync opengl
+if [[ "$(cat /etc/hostname)" == *"pc"* ]]; then compton -b --vsync opengl ; fi
 sxhkd &
 bspwm
