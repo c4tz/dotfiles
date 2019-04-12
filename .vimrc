@@ -1,4 +1,6 @@
 filetype plugin indent on
+syntax on
+let mapleader="\,"
 
 set nocompatible
 set number

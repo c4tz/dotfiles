@@ -2,7 +2,9 @@
 nnoremap <C-p> :Files<CR>
 
 " Tabularize shortcuts
-nmap ä= :Tabularize /=<CR>
-vmap ä= :Tabularize /=<CR>
-nmap ä: :Tabularize /:\zs<CR>
-vmap ä: :Tabularize /:\zs<CR>
+nmap <Leader>t= :Tabularize /=<CR>
+vmap <Leader>t= :Tabularize /=<CR>
+nmap <Leader>t: :Tabularize /:\zs<CR>
+vmap <Leader>t: :Tabularize /:\zs<CR>
+nmap <Leader>t\ :Tabularize /\\<CR>
+vmap <Leader>t\ :Tabularize /\\<CR>
