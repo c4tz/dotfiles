@@ -37,7 +37,7 @@ ctrl + alt + l
 
 # volume
 XF86Audio{Raise,Lower}Volume
-    amixer -D pulse sset Master 5%{+,-}
+    pactl set-sink-volume @DEFAULT_SINK@ {+,-}5%
 
 # brightness
 XF86MonBrightness{Up,Down}
@@ -53,7 +53,7 @@ control + super + s
 
 # shutdown NAS + PC
 control + super + shift + q
-	ssh -i ~/.ssh/rsync/id_rsa root@192.168.1.2 shutdown now; shutdown now
+	ssh -i ~/.ssh/rsync/id_rsa root@192.168.1.2 systemctl suspend; shutdown now
 
 # reboot
 control + super + r

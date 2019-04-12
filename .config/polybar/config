@@ -158,9 +158,7 @@ time = %H:%M
 interval = 5
 
 [module/volume]
-type = internal/volume
-master-soundcard = pulse
-speaker-soundcard = pulse
+type = internal/pulseaudio
 
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
