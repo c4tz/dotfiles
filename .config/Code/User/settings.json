@@ -43,5 +43,6 @@
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
     "terminal.external.linuxExec": "xfce4-terminal",
-    "terminal.explorerKind": "external"
+    "terminal.explorerKind": "external",
+    "search.usePCRE2": true
 }
