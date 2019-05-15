@@ -124,7 +124,7 @@ label = %{F#666}%{F-} %output%
 
 [module/weather]
 type = custom/script
-exec = python ~/.scripts/weather.py
+exec = python -W ignore ~/.scripts/weather.py
 interval = 300
 label = %{F#666}%{F-} %output%
 

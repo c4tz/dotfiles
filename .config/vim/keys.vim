@@ -1,5 +1,6 @@
 " Ctrl+P opens a fuzzy filesearch window (powered by Fzf)
 nnoremap <C-p> :Files<CR>
+nnoremap <C-b> :NERDTreeToggle<CR>
 
 " Tabularize shortcuts
 nmap <Leader>t= :Tabularize /=<CR>
