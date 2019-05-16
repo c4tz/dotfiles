@@ -6,6 +6,7 @@ set nocompatible
 set number
 set clipboard=unnamedplus
 set hidden
+set esckeys
 set incsearch
 set ignorecase
 set smartcase
@@ -15,6 +16,7 @@ set shiftwidth=4
 set encoding=utf-8
 set autoindent
 set smartindent
+set notimeout ttimeout ttimeoutlen=200
 
 source ~/.config/vim/plugins.vim
 source ~/.config/vim/keys.vim
