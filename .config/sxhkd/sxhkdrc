@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + t
-    urxvt
+    urxvt -e zsh -c tmux
 
 # browser
 super + w
