@@ -6,7 +6,7 @@
 | Shell | [zsh](https://wiki.archlinux.org/index.php/zsh)
 | Paket Manager | [yay](https://github.com/Jguer/yay)
 | Window Manager | [bspwm](https://wiki.archlinux.org/index.php/bspwm)
-| Terminal      | [xfce4-terminal](https://github.com/xfce-mirror/xfce4-terminal)
+| Terminal      | [urxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode)
 | File Manager | [pcmanfm](https://wiki.archlinux.org/index.php/PCManFM)
 | Editor      | [Visual Studio Code](https://wiki.archlinux.org/index.php/Visual_Studio_Code)
 | Bar | [polybar](https://github.com/jaagr/polybar)
