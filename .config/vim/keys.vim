@@ -5,8 +5,12 @@ nnoremap <C-b> :NERDTreeToggle<CR>
 " Splits
 nnoremap <Leader>. :vsplit<CR>
 nnoremap <Leader>- :split<CR>
-nnoremap <C-x> <C-W>q
+nnoremap <C-x> :q<CR>
 nnoremap <C-G> <C-W>R
+nnoremap <silent> <ESC>h :TmuxResizeLeft<cr>
+nnoremap <silent> <ESC>l :TmuxResizeRight<cr>
+nnoremap <silent> <ESC>j :TmuxResizeDown<cr>
+nnoremap <silent> <ESC>k :TmuxResizeUp<cr>
 
 " Tabularize shortcuts
 nmap <Leader>t= :Tabularize /=<CR>
