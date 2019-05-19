@@ -10,13 +10,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree',                     { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin',             { 'on': 'NERDTreeToggle' }
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
-Plug 'matze/vim-move'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-rooter'
 Plug 'tpope/vim-sensible'
 Plug 'godlygeek/tabular'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Valloric/YouCompleteMe',                  { 'do': './install.py' }
+Plug 'tpope/vim-commentary'
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
