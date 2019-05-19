@@ -10,6 +10,9 @@ xsetroot -cursor_name left_ptr &
 numlockx &
 xrdb -merge "$HOME/.Xresources"
 
+# set capslock to work as escape
+setxkbmap -option caps:escape
+
 # fonts
 xset +fp ~/.fonts/dina-powerline
 xset fp rehash
