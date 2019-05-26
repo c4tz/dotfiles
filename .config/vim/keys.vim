@@ -1,11 +1,13 @@
 " Commands
 nnoremap <C-p> :Files<CR>
 nnoremap <C-b> :NERDTreeToggle<CR>
+nnoremap <C-s> :w<CR>
+nnoremap <C-f> :Rg 
 
 " Splits
 nnoremap <Leader>. :vsplit<CR>
 nnoremap <Leader>- :split<CR>
-nnoremap <C-x> :q<CR>
+nnoremap <C-q> :q<CR>
 nnoremap <C-G> <C-W>R
 nnoremap <silent> <ESC>h :TmuxResizeLeft<cr>
 nnoremap <silent> <ESC>l :TmuxResizeRight<cr>

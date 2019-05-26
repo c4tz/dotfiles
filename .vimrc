@@ -28,6 +28,9 @@ LuciusDarkLowContrast
 let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 
+" automatically set same size for splits on window resize
+autocmd VimResized * wincmd =
+
 " Airline setup
 set laststatus=2
 let g:airline_powerline_fonts = 1

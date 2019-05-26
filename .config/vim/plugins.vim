@@ -1,3 +1,4 @@
+""" Plugin list
 call plug#begin()
 
 Plug 'vim-airline/vim-airline'
@@ -25,3 +26,8 @@ Plug 'melonmanchan/vim-tmux-resizer'
 " Plug 'benmills/vimux', { 'on': 'VimuxRunCommand' }
 
 call plug#end()
+
+""" Plugin configurations
+
+" fzf.vim override
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --hidden --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, <bang>0)

@@ -1,3 +1,6 @@
+# Do not stop output on CTRL-s
+stty -ixon
+
 # Env vars
 export EDITOR='vim'
 export GIT_EDITOR='vim'
