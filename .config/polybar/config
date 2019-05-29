@@ -56,7 +56,7 @@ bspwm-focused-underline = #cc333333
 
 [bar/top-work]
 inherit = bar/top
-monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:DP1}
 modules-left = volume traffic fs cpu memory battery
 modules-right = led mail crypto music weather date
 

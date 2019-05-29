@@ -12,7 +12,7 @@ ZSH=/usr/share/oh-my-zsh/
 ZSH_THEME="agnoster"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(git zsh-syntax-highlighting)
+plugins=(git)
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
@@ -30,3 +30,5 @@ if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec startx
 fi
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
