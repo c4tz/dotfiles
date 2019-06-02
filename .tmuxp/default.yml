@@ -1,0 +1,14 @@
+session_name: shorthands
+shell_command_before: |
+  tmux setw main-pane-height $(expr $(tmux display -p '#{window_height}') \* 75 \/ 100)
+  tmux select-layout main-horizontal
+  clear
+
+windows:
+  - window_name: vmb
+    start_directory: ~/projects/tfw/traum_ferienwohnungen
+    panes:
+      - vim -O .gitlab-ci.yml package.json webpack.config.js
+      - clear
+      - clear
+      - clear
