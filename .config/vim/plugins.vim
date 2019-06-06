@@ -18,6 +18,7 @@ Plug 'godlygeek/tabular'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'Valloric/YouCompleteMe',                  { 'do': './install.py' }
 Plug 'tpope/vim-commentary'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'

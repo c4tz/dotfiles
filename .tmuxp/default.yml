@@ -1,14 +1,48 @@
-session_name: shorthands
-shell_command_before: |
-  tmux setw main-pane-height $(expr $(tmux display -p '#{window_height}') \* 75 \/ 100)
-  tmux select-layout main-horizontal
-  clear
+session_name: default
+shell_command_before: sleep 1
+# shell_command_before: |
+#   tmux setw main-pane-height $(expr $(tmux display -p '#{window_height}') \* 75 \/ 100)
+#   sleep 0.4
+#   tmux set-hook after-split-window "selectl main-horizontal"
+#   tmux select-layout main-horizontal
+#   clear
+
+.default: &default
+  layout: main-horizontal
+  options:
+    main-pane-height: 60
+  panes:
+    - vim .
+    - clear
 
 windows:
   - window_name: vmb
-    start_directory: ~/projects/tfw/traum_ferienwohnungen
-    panes:
-      - vim -O .gitlab-ci.yml package.json webpack.config.js
-      - clear
-      - clear
-      - clear
+    <<: *default
+    start_directory: ~/projects/traum_ferienwohnungen
+  - window_name: tadmin
+    start_directory: ~/projects/traum_ferienwohnungen_admin
+    <<: *default
+  - window_name: py
+    start_directory: ~/projects/python-project-setup
+    <<: *default
+  - window_name: sentry
+    start_directory: ~/projects/sentry
+    <<: *default
+  - window_name: security
+    start_directory: ~/projects/security
+    <<: *default
+  - window_name: ci-scripts
+    start_directory: ~/projects/ci-scripts
+    <<: *default
+  - window_name: advanced
+    start_directory: ~/projects/advanced-pricing
+    <<: *default
+  - window_name: dcb
+    start_directory: ~/projects/docker-classic-base
+    <<: *default
+  - window_name: landingpages
+    start_directory: ~/projects/landingpages
+    <<: *default
+  - window_name: dots
+    start_directory: ~/projects/dotfiles
+    <<: *default
