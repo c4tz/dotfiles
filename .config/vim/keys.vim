@@ -1,18 +1,23 @@
 " Commands
-nnoremap <C-p> :Files<CR>
-nnoremap <C-b> :NERDTreeToggle<CR>
-nnoremap <C-s> :w<CR>
-nnoremap <C-f> :Rg 
+nmap <C-p> :Files<CR>
+nmap <C-b> :NERDTreeToggle<CR>
+nmap <C-q> :q<CR>
+imap <C-q> <ESC>:q<CR>
+vmap <C-q> <ESC>:q<CR>
+nmap <C-s> :w<CR>
+imap <C-s> <ESC>:w<CR>i
+vmap <C-s> <ESC>:w<CR>gv
+nmap <C-f> :Rg 
+nmap <C-h> :%s/foo/bar/g
 
 " Splits
-nnoremap <Leader>. :vsplit<CR>
-nnoremap <Leader>- :split<CR>
-nnoremap <C-q> :q<CR>
-nnoremap <C-G> <C-W>R
-nnoremap <silent> <ESC>h :TmuxResizeLeft<cr>
-nnoremap <silent> <ESC>l :TmuxResizeRight<cr>
-nnoremap <silent> <ESC>j :TmuxResizeDown<cr>
-nnoremap <silent> <ESC>k :TmuxResizeUp<cr>
+nmap <Leader>. :vsplit<CR>
+nmap <Leader>- :split<CR>
+nmap <C-G> <C-W>R
+nmap <silent> <ESC>h :TmuxResizeLeft<cr>
+nmap <silent> <ESC>l :TmuxResizeRight<cr>
+nmap <silent> <ESC>j :TmuxResizeDown<cr>
+nmap <silent> <ESC>k :TmuxResizeUp<cr>
 
 " Tabularize shortcuts
 nmap <Leader>t= :Tabularize /=<CR>

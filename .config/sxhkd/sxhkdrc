@@ -76,7 +76,7 @@ super + alt + r
     bspc quit; bspwm & sleep 1 && bspc wm --adopt-orphans
 
 # close and kill
-alt + F4
+super + q
     bspc node --close
 
 # alternate between the tiled and monocle layout
