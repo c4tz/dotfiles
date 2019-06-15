@@ -10,8 +10,9 @@ xsetroot -cursor_name left_ptr &
 numlockx &
 xrdb -merge "$HOME/.Xresources"
 
-# set capslock to work as escape
-setxkbmap -option caps:escape
+# capslock=esc, caps+hjkl=arrow keys
+xmodmap ~/.Xmodmap
+xcape -e 'Mode_switch=Escape'
 
 # fonts
 xset +fp ~/.fonts/dina-powerline
