@@ -5,7 +5,7 @@ nmap <C-q> :q<CR>
 imap <C-q> <ESC>:q<CR>
 vmap <C-q> <ESC>:q<CR>
 nmap <C-s> :w<CR>
-imap <C-s> <ESC>:w<CR>i
+imap <C-s> <ESC>:w<CR>
 vmap <C-s> <ESC>:w<CR>gv
 nmap <C-f> :Rg 
 nmap <C-h> :%s/foo/bar/g
