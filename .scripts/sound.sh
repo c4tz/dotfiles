@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ $1 = "headset" ]; then
-    device="alsa_output.usb-Logitech_Logitech_G930_Headset-00.analog-stereo"
+    device="alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_Tactic_3D__Alpha_00069161-00.analog-stereo"
 fi
 
 if [ $1 = "speakers" ]; then
