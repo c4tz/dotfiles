@@ -21,9 +21,11 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
+# aliases
+alias speedtest='wget -O /dev/null http://speedtest.belwue.net/1000G'
+
 # misc stuff
 eval "$(direnv hook zsh)"
-
 if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 
 # auto startx if display is not set
