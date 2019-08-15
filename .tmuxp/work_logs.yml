@@ -1,18 +1,8 @@
-session_name: default
-shell_command_before: sleep 1
-# shell_command_before: |
-#   tmux setw main-pane-height $(expr $(tmux display -p '#{window_height}') \* 75 \/ 100)
-#   sleep 0.4
-#   tmux set-hook after-split-window "selectl main-horizontal"
-#   tmux select-layout main-horizontal
-#   clear
+session_name: work_logs
+before_script: tmux set-hook -t work_logs pane-focus-in 'run-shell "tmux select-window -t work_main:\$(tmux display-message -p \"#I\")"'
 
 .default: &default
-  layout: main-horizontal
-  options:
-    main-pane-height: 60
   panes:
-    - vim .
     - clear
 
 windows:
