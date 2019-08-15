@@ -38,16 +38,16 @@ if [[ $(hostname) == 'pc' ]]; then
 fi
 
 if [[ $(hostname) == 'laptop' ]]; then
-    xrandr --newmode "1680x1050_60.00"  147.14  1680 1784 1968 2256  1050 1051 1054 1087  -HSync +Vsync
-    xrandr --addmode DVI-I-1-1 1680x1050_60.00
     xrandr \
-        --output eDP1 --mode 1920x1080 --rate 143.91 --primary --pos 0x0 \
-	--output DP1 --mode 2560x1080 --pos 1920x0 \
-	--output HDMI2 --mode 1680x1050 --pos 4480x15
+        --output eDP1 --primary --mode 1920x1080 --pos 2000x1080 \
+	--output DP1 --mode 2560x1080 --pos 1680x0 \
+	--output HDMI2 --mode 1680x1050 --pos 0x78 \
+        --output DVI-I-1-1 --mode 1680x1050 --pos 4240x78
 
     bspc monitor eDP1 -d 1 2 3
-    bspc monitor DP1 -d 4 5 6
-    bspc monitor HDMI2 -d 7 8 9
+    bspc monitor DP1 -d 4 5
+    bspc monitor HDMI2 -d 6 7
+    bspc monitor DVI-I-1-1 -d 8 9
 
     bspc rule -a Rambox desktop='^1' state=floating
 fi
