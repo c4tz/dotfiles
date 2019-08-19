@@ -39,8 +39,8 @@ fi
 
 if [[ $(hostname) == 'laptop' ]]; then
     xrandr \
-        --output eDP1 --primary --mode 1920x1080 --pos 2000x1080 \
-	--output DP1 --mode 2560x1080 --pos 1680x0 \
+        --output eDP1 --mode 1920x1080 --pos 2000x1080 \
+	--output DP1 --primary --mode 2560x1080 --pos 1680x0 \
 	--output HDMI2 --mode 1680x1050 --pos 0x78 \
         --output DVI-I-1-1 --mode 1680x1050 --pos 4240x78
 
