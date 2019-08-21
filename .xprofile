@@ -2,7 +2,7 @@
 nm-applet &
 
 # auto-lock screen
-xautolock -time 5 -locker "~/.scripts/lock.sh" &
+xautolock -time 5 -locker "python ~/.scripts/lock.py ~/.scripts/lock.png" &
 
 # tray-icon for updates
 pamac-tray &
