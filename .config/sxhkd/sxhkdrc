@@ -33,7 +33,7 @@ super + Escape
 
 # lock the screen
 ctrl + alt + l
-    python ~/.scripts/lock.py ~/.scripts/lock.png
+    ~/.scripts/lock ~/.scripts/lock.png
 
 # volume
 XF86Audio{Raise,Lower}Volume
@@ -49,7 +49,7 @@ control + super + q
 
 # standby
 control + super + s
-    zenity --question --text="Standby?" && systemctl suspend && python ~/.scripts/lock.py ~/.scripts/lock.png
+    zenity --question --text="Standby?" && systemctl suspend && ~/.scripts/lock ~/.scripts/lock.png
 
 # shutdown NAS + PC
 control + super + shift + q
