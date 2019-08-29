@@ -15,6 +15,7 @@ set expandtab
 set shiftwidth=4
 set encoding=utf-8
 set autoindent
+set noswapfile
 set smartindent
 set notimeout ttimeout ttimeoutlen=200
 
