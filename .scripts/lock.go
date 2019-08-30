@@ -1,8 +1,8 @@
 package main
 
 import (
+    "github.com/vova616/screenshot"
     "github.com/BurntSushi/xgb"
-    "github.com/BurntSushi/xgb/xproto"
     "github.com/BurntSushi/xgb/xinerama"
     "github.com/disintegration/gift"
     "image/png"
@@ -23,59 +23,23 @@ func main() {
         iconChan <- image.Image(pngLock)
     }()
 
-    // init X connection
-    c, _ := xgb.NewConn()
-    defer c.Close()
-
-    // get root window and its size
-    root := xproto.Setup(c).DefaultScreen(c)
-    rootWidth := root.WidthInPixels
-    rootHeight := root.HeightInPixels
-
-    // take screenshot
-    screenChan := make(chan *image.RGBA)
-    go func() {
-        area := image.Rect(
-            0,
-            0,
-            int(rootWidth),
-            int(rootHeight),
-        )
-
-        x, y := area.Dx(), area.Dy()
-        xImg, _ := xproto.GetImage(
-            c,
-            xproto.ImageFormatZPixmap,
-            xproto.Drawable(root.Root),
-            int16(area.Min.X),
-            int16(area.Min.Y),
-            uint16(x),
-            uint16(y),
-            0xffffffff,
-        ).Reply()
-
-        data := xImg.Data
-        for i := 0; i < len(data); i += 4 {
-            data[i], data[i+2], data[i+3] = data[i+2], data[i], 255
-        }
-        screenChan <- &image.RGBA{data, 4 * x, image.Rect(0, 0, x, y)}
-    }()
-
     // find primary monitor's position and resolution
     primaryChan := make(chan xinerama.ScreenInfo)
     go func() {
+        c, _ := xgb.NewConn()
         xinerama.Init(c)
         reply, _ := xinerama.QueryScreens(c).Reply()
+        c.Close()
         primaryChan <- reply.ScreenInfo[0]
     }()
+
+    // take screenshot and pixelate
+    screen, _ := screenshot.CaptureScreen()
+    gift.New(gift.Pixelate(10)).Draw(screen, screen)
 
     // wait for threads to finish
     primary := <-primaryChan
     icon := <-iconChan
-    screen := <-screenChan
-
-    // pixelate
-    gift.New(gift.Pixelate(10)).Draw(screen, screen)
 
     // paste lock onto screenshot
     posX := int(primary.XOrg) + int(primary.Width/2) - (icon.Bounds().Max.X/2)
@@ -90,10 +54,11 @@ func main() {
     }
 
     // run i3lock with raw byte buffer as stdin
+    format := strconv.Itoa(screen.Bounds().Dx()) + "x" +
+              strconv.Itoa(screen.Bounds().Dy()) + ":rgbx"
     i3 := exec.Command(
         "i3lock",
-        "--raw",
-        strconv.Itoa(int(rootWidth)) + "x" + strconv.Itoa(int(rootHeight)) + ":rgbx",
+        "--raw", format,
         "-i", "/dev/stdin",
         "--insidevercolor=#ffffff00",
         "--ringvercolor=#0000bb00",
