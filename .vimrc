@@ -3,6 +3,7 @@ syntax on
 let mapleader="\,"
 
 set nocompatible
+set relativenumber
 set number
 set clipboard=unnamedplus
 set hidden
@@ -17,6 +18,8 @@ set encoding=utf-8
 set autoindent
 set noswapfile
 set smartindent
+set colorcolumn=80
+set noswapfile
 set notimeout ttimeout ttimeoutlen=200
 
 source ~/.config/vim/plugins.vim
@@ -39,3 +42,5 @@ let g:ycm_autoclose_preview_window_after_completion=1
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "lucius"
+
+let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
