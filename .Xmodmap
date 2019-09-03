@@ -1,3 +1,4 @@
+keycode 22 = BackSpace BackSpace Delete
 keycode 66 = Mode_switch
 keysym h = h H Left
 keysym l = l L Right
