@@ -16,6 +16,7 @@ nmap s <Plug>(easymotion-overwin-f)
 " Splits
 
 nmap <Leader>- :split<CR>
+nmap <Leader>. :vsplit<CR>
 nmap <C-G> <C-W>R
 nmap <silent> <ESC>h :TmuxResizeLeft<cr>
 nmap <silent> <ESC>l :TmuxResizeRight<cr>
