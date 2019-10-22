@@ -13,8 +13,8 @@ wmname LG3D
 # chat client
 rambox &
 
-# status bar
-if [[ "$(cat /etc/hostname)" == *"laptop"* ]]; then polybar top-work ; else polybar top ; fi
-
 # usenet client daemon
 nzbget -D
+
+# status bar
+if [[ "$(cat /etc/hostname)" == *"laptop"* ]]; then polybar top-work ; else polybar top ; fi
