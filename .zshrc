@@ -34,12 +34,17 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     exec startx
 fi
 
-# export POWERLEVEL9K_FAIL_ICON=x
+export POWERLEVEL9K_FAIL_ICON=x
 export POWERLEVEL9K_STATUS_OK=false
 export POWERLEVEL9K_STATUS_CROSS=true
+export POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
+export POWERLEVEL9K_COMMAND_EXECUTION_TIME_PRECISION=3
+export POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='white'
+export POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='238'
+export POWERLEVEL9K_EXECUTION_TIME_ICON=''
 export POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-remotebranch git-tagname)
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv pyenv dir vcs)
-export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs time)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
