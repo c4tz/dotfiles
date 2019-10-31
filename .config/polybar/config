@@ -58,7 +58,7 @@ bspwm-focused-underline = #cc333333
 inherit = bar/top
 monitor = ${env:MONITOR:DP1}
 modules-left = volume traffic fs cpu memory battery
-modules-right = led mail crypto music weather date
+modules-right = mail time-india crypto music weather date
 
 [module/fs]
 type = internal/fs
@@ -155,6 +155,12 @@ type = internal/date
 label = %{F#666}%{F-} %date% %{F#666}%{F-} %time%
 date = %d.%m.%Y
 time = %H:%M
+interval = 5
+
+[module/time-india]
+type = custom/script
+exec = TZ=Asia/Kolkata date +"IST: %H:%M"
+label = %{F#666}%{F-} %output%
 interval = 5
 
 [module/volume]
