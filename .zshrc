@@ -13,6 +13,7 @@ export EDITOR='vim'
 export GIT_EDITOR='vim'
 export ARCHFLAGS="-arch x86_64"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g ""'
+export ZLE_RPROMPT_INDENT=0
 
 # History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -45,6 +46,7 @@ export POWERLEVEL9K_EXECUTION_TIME_ICON=''
 export POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-remotebranch git-tagname)
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv pyenv dir vcs)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
+export POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
