@@ -7,6 +7,9 @@ xautolock -time 5 -locker "~/.scripts/lock ~/.scripts/lock.png" &
 # tray-icon for updates
 pamac-tray &
 
+# authentication agent
+/usr/lib/xfce-polkit/xfce-polkit &
+
 # bspwm fix for jdownloader
 wmname LG3D
 

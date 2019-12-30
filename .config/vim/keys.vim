@@ -1,5 +1,7 @@
 " Commands
+imap kj <Esc>
 nmap <C-p> :Files<CR>
+nmap <Leader>p :FZFMru<CR>
 nmap <C-b> :NERDTreeToggle<CR>
 nmap <C-q> :q<CR>
 imap <C-q> <ESC>:q<CR>

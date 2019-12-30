@@ -7,6 +7,7 @@ Plug 'w0rp/ale'
 Plug 'Raimondi/delimitMate'
 Plug 'Chiel92/vim-autoformat'
 Plug 'junegunn/fzf.vim'
+Plug 'pbogut/fzf-mru.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdtree',                     { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin',             { 'on': 'NERDTreeToggle' }
@@ -22,6 +23,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'Valloric/YouCompleteMe',                  { 'do': './install.py' }
 Plug 'tpope/vim-commentary'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'chrisbra/SudoEdit.vim',                   { 'on': 'SudoWrite' }
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'

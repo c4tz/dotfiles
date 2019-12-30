@@ -9,10 +9,7 @@ fi
 xsetroot -cursor_name left_ptr &
 numlockx &
 xrdb -merge "$HOME/.Xresources"
-
-# capslock=esc, caps+hjkl=arrow keys
 xmodmap ~/.Xmodmap
-xcape -e 'Mode_switch=Escape'
 
 # fonts
 xset +fp ~/.fonts/dina-powerline

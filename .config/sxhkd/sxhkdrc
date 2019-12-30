@@ -89,7 +89,8 @@ super + y
 
 # swap the current node and the biggest node
 super + g
-    bspc node -s biggest
+    bspc node @/ -R 90
+    # bspc node -s biggest
 
 #
 # state/flags
