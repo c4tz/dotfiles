@@ -60,3 +60,13 @@ windows:
       - vim -O .config/bspwm/bspwmrc .config/sxhkd/sxhkdrc .vimrc .tmux.conf
       - clear
     start_directory: ~/projects/dotfiles
+  - window_name: kafka
+    panes:
+      - vim -O docker-compose.yaml source.json stream-sink.json
+      - clear
+    start_directory: ~/projects/tfw/kafka-playground
+  - window_name: transformer
+    panes:
+      - vim -O .gitlab-ci.yml src/main/java/org/traum/RatingsTransformer.java pom.xml
+      - clear
+    start_directory: ~/projects/tfw/kafka-ratings-transformer

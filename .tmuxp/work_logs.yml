@@ -36,3 +36,9 @@ windows:
   - window_name: dots
     start_directory: ~/projects/dotfiles
     <<: *default
+  - window_name: kafka
+    start_directory: ~/projects/kafka-playground
+    <<: *default
+  - window_name: transformer
+    start_directory: ~/projects/kafka-ratings-transformer
+    <<: *default
