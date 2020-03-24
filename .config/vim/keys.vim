@@ -14,6 +14,7 @@ nmap <C-e> :e %<CR>
 nmap <Leader>f :%s/foo/bar/g
 nmap <Leader>F :! sed -i 's/pattern/replacement/' ./**
 nmap s <Plug>(easymotion-overwin-f)
+nmap <Leader>af :Autoformat<CR>
 
 " Splits
 
