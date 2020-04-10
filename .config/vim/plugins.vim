@@ -20,7 +20,7 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'easymotion/vim-easymotion'
 Plug 'godlygeek/tabular'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'Valloric/YouCompleteMe',                  { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe',                  { 'do': './install.py --all' }
 Plug 'tpope/vim-commentary'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'chrisbra/SudoEdit.vim',                   { 'on': 'SudoWrite' }
