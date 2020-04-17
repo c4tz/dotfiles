@@ -1,0 +1,41 @@
+[user]
+    name = c4tz
+    email = j.zink@outlook.com
+
+[includeIf "gitdir:~/projects/work/"]
+    path = ~/projects/work/.gitconfig
+
+[alias]
+    p = "!f(){ git push -u origin $(git rev-parse --abbrev-ref HEAD);};f"
+    diff = diff --color | diff-so-fancy
+    s = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\";};f"
+    ls = "!f(){ git log --pretty=format:'%C(yellow)%h %ad%Cred%d %Creset%s%Cblue [%cn]' --graph --decorate --date=relative | nl '-s: ' | more;};f"
+    sqp = "!f(){ git add -u && git commit -m 'squash' && git reset --soft HEAD~2 && git commit -m\"$(git log --format=%B --reverse HEAD..HEAD@{2})\" && git push -f origin \"$(git rev-parse --abbrev-ref HEAD)\"; };f"
+
+[merge]
+    tool = meld
+    conflictstyle = diff3
+
+[mergetool "meld"]
+    cmd = meld $LOCAL $BASE $REMOTE -o $MERGED --auto-merge
+
+[rerere]
+    enabled = 1
+
+[pull]
+    rebase = true
+
+[core]
+    pager = diff-so-fancy | less --tabs=4 -RFX
+
+[diff-so-fancy]
+    markEmptyLines = false
+    changeHunkIndicators = false
+    stripLeadingSymbols = false
+    useUnicodeRuler = false
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
