@@ -52,6 +52,9 @@ bindkey -M vicmd e edit-command-line
 
 # aliases
 alias speedtest='wget -O /dev/null http://speedtest.belwue.net/1000G'
+alias work_home="name=work folder=~/projects/work cmd='zsh -i -c \"vim\"' split=20 ~/.scripts/startmux.sh"
+alias work_edit="name=editor folder=~/projects/work cmd='zsh -i -c \"vim\"' hook=logs ~/.scripts/startmux.sh"
+alias work_logs="name=logs folder=~/projects/work cmd='zsh' hook=editor ~/.scripts/startmux.sh"
 
 # misc stuff
 eval "$(direnv hook zsh)"
