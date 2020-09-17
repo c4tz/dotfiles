@@ -20,10 +20,11 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'easymotion/vim-easymotion'
 Plug 'godlygeek/tabular'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'Valloric/YouCompleteMe',                  { 'do': './install.py --all' }
 Plug 'tpope/vim-commentary'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'chrisbra/SudoEdit.vim',                   { 'on': 'SudoWrite' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -37,3 +38,14 @@ call plug#end()
 
 " fzf.vim override
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --hidden --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, <bang>0)
+
+" use custom coc python lsp
+let g:coc_user_config = {
+    \ 'python.jediEnabled': v:false
+\ }
+
+" ale config
+let g:ale_fixers = {
+    \ 'python': ['yapf'],
+\ }
+let g:ale_fix_on_save = 1

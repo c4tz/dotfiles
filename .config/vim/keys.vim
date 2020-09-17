@@ -17,7 +17,6 @@ nmap s <Plug>(easymotion-overwin-f)
 nmap <Leader>af :Autoformat<CR>
 
 " Splits
-
 nmap <Leader>- :split<CR>
 nmap <Leader>. :vsplit<CR>
 nmap <C-G> <C-W>R
@@ -47,3 +46,7 @@ noremap <Leader>gb :Gblame<cr>
 map w <Plug>CamelCaseMotion_w
 map b <Plug>CamelCaseMotion_b
 map e <Plug>CamelCaseMotion_e
+
+" coc shortcuts
+nmap <silent> gd <Plug>(coc-definition)
+nmap <leader>rn <Plug>(coc-rename)
