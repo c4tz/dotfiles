@@ -11,6 +11,9 @@ numlockx &
 xrdb -merge "$HOME/.Xresources"
 xmodmap ~/.Xmodmap
 
+# make qt5 apps use gtk theme
+export QT_QPA_PLATFORMTHEME=gtk2
+
 # fonts
 xset +fp ~/.fonts/dina-powerline
 xset fp rehash
