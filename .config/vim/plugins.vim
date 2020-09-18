@@ -40,12 +40,11 @@ call plug#end()
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --hidden --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, <bang>0)
 
 " use custom coc python lsp
-let g:coc_user_config = {
-    \ 'python.jediEnabled': v:false
-\ }
+let g:coc_user_config = {'python.jediEnabled': v:false}
 
 " ale config
-let g:ale_fixers = {
-    \ 'python': ['yapf'],
-\ }
+let g:ale_fixers = {'python': ['black', 'isort']}
+let g:ale_linters = {'python': ['pylint', 'mypy']}
 let g:ale_fix_on_save = 1
+let g:ale_python_black_options = '-l 79'
+let g:ale_python_mypy_options = '--no-strict-optional --disallow-untyped-defs --ignore-missing-imports'

@@ -10,6 +10,5 @@ for device in device_manager.devices:
     device.fx.static(*COLOR)
     if device.name == "Razer Naga Chroma":
         device.fx.misc.scroll_wheel.static(*COLOR)
-        #Logo LED is broken, try to set best looking color
+        # Logo LED is broken, try to set best looking color
         device.fx.misc.logo.static(0, 255, 3)
-
