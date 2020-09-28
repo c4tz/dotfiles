@@ -24,9 +24,9 @@ WP=$HOME/Pictures/Wallpapers/leaves.jpg
 
 if [[ $(hostname) == 'pc' ]]; then
     xrandr \
-        --output DP-4 --mode 2560x1440 --rate 143.91 --primary --pos 1080x0 \
-	--output DVI-D-0 --mode 1920x1080 --pos 0x-130 --rotate right \
-	--output HDMI-0 --mode 1920x1080 --pos 3640x-130 --rotate left
+    	--output DP-4 --mode 2560x1440 --rate 143.91 --primary --pos 1080x0 \
+		--output DVI-D-0 --mode 1920x1080 --pos 0x-130 --rotate right \
+		--output HDMI-0 --mode 1920x1080 --pos 3640x-130 --rotate left
 
     bspc monitor DVI-D-0 -d 1 2 3
     bspc monitor DP-4 -d 4 5 6
@@ -39,15 +39,13 @@ fi
 
 if [[ $(hostname) == 'laptop' ]]; then
     xrandr \
-        --output eDP1 --mode 1920x1080 --pos 2000x1080 \
-	--output DP1 --primary --mode 2560x1080 --pos 1680x0 \
-	--output HDMI2 --mode 1680x1050 --pos 0x78 \
-        --output DVI-I-1-1 --mode 1680x1050 --pos 4240x78
+        --output eDP --mode 1920x1080 --pos 0x0 \
+        --output DisplayPort-2 --primary --mode 1920x1080 --pos 1920x0 \
+        --output DisplayPort-4 --mode 1920x1080 --pos 3840x0
 
-    bspc monitor eDP1 -d 1 2 3
-    bspc monitor DP1 -d 4 5
-    bspc monitor HDMI2 -d 6 7
-    bspc monitor DVI-I-1-1 -d 8 9
+     bspc monitor eDP -d 1 2 3
+     bspc monitor DisplayPort-2 -d 4 5 6
+     bspc monitor DisplayPort-4 -d 7 8 9
 
     bspc rule -a Rambox desktop='^1' state=floating
 fi
