@@ -14,7 +14,6 @@ margin-bottom = 0
 
 [bar/top]
 enable-ipc = true
-monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 24
 
@@ -36,7 +35,7 @@ module-margin-right = 0
 font-0 = dina:pixelsize=9;1
 font-1 = "Siji:pixelsize=10;2"
 font-2 = unifont:size=6;1
-font-3 = cryptocoins:size=8:style=Regular;3
+font-3 = "Hack Nerd Font:size=8:antialias=false:style=Regular;2"
 
 modules-left = volume traffic fs cpu memory vpn
 modules-center = xwindow
@@ -56,9 +55,8 @@ bspwm-focused-underline = #cc333333
 
 [bar/top-work]
 inherit = bar/top
-monitor = ${env:MONITOR:DP1}
 modules-left = volume traffic fs cpu memory battery
-modules-right = mail time-india crypto music weather date
+modules-right = mail crypto music weather date
 
 [module/fs]
 type = internal/fs
@@ -112,7 +110,7 @@ label-disconnected = not connected
 [module/crypto]
 type = custom/script
 interval = 30
-label = %{F#666}%{T4}%{T-}%{F-} %output%
+label = %{F#666}%{T4}%{T-}%{F-} %output%
 exec = curl -s "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD" | jq -r '.USD | floor' 2> /dev/null
 
 [module/vpn]
@@ -141,26 +139,11 @@ exec-if = python ~/.scripts/player.py
 interval = 5
 label = %{F#666}%{F-} %output%
 
-[module/led]
-type = custom/ipc
-hook-0 = python ~/.scripts/led.py green
-hook-1 = python ~/.scripts/led.py red
-format = %{F#<output>}%{F-}
-click-left = polybar-msg hook led 1
-click-right = polybar-msg hook led 2
-initial = 1
-
 [module/date]
 type = internal/date
 label = %{F#666}%{F-} %date% %{F#666}%{F-} %time%
 date = %d.%m.%Y
 time = %H:%M
-interval = 5
-
-[module/time-india]
-type = custom/script
-exec = TZ=Asia/Kolkata date +"IST: %H:%M"
-label = %{F#666}%{F-} %output%
 interval = 5
 
 [module/volume]
