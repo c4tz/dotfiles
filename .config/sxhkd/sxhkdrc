@@ -8,7 +8,10 @@ super + t
 
 # browser
 super + w
-    chromium
+    chromium --profile-directory="Default"
+
+super + shift + w
+    chromium --profile-directory="Work"
 
 # file manager
 super + f
