@@ -37,7 +37,7 @@ font-1 = "Siji:pixelsize=10;2"
 font-2 = unifont:size=6;1
 font-3 = "Hack Nerd Font:size=8:antialias=false:style=Regular;2"
 
-modules-left = volume traffic fs cpu memory vpn
+modules-left = volume traffic fs cpu memory mouse vpn
 modules-center = xwindow
 modules-right = mail crypto music weather date
 
@@ -138,6 +138,13 @@ exec = python ~/.scripts/player.py
 exec-if = python ~/.scripts/player.py
 interval = 5
 label = %{F#666}%{F-} %output%
+
+[module/mouse]
+type = custom/script
+exec = python ~/.scripts/mouse.py
+exec-if = python ~/.scripts/mouse.py
+interval = 300
+label = %{F#666}%{F-} %output%
 
 [module/date]
 type = internal/date
