@@ -19,6 +19,6 @@ xset +fp ~/.fonts/dina-powerline
 xset fp rehash
 
 # wm stuff
-if [[ "$(cat /etc/hostname)" == *"pc"* ]]; then compton -b --vsync opengl ; fi
+picom -CG --no-fading-openclose &
 sxhkd &
 bspwm
