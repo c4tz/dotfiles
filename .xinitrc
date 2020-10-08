@@ -19,6 +19,6 @@ xset +fp ~/.fonts/dina-powerline
 xset fp rehash
 
 # wm stuff
-picom -CG --no-fading-openclose &
+picom -CG --no-fading-openclose --experimental-backends &
 sxhkd &
 bspwm
