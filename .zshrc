@@ -45,6 +45,27 @@ bindkey '^N' down-history
 bindkey -M viins 'kj' vi-cmd-mode
 bindkey 'kj' vi-cmd-mode
 
+# fix special keys
+typeset -A key
+key=(
+  Home       "${terminfo[khome]}"
+  End        "${terminfo[kend]}"
+  Insert     "${terminfo[kich1]}"
+  Delete     "${terminfo[kdch1]}"
+  Left       "${terminfo[kcub1]}"
+  Right      "${terminfo[kcuf1]}"
+  PageUp     "${terminfo[kpp]}"
+  PageDown   "${terminfo[knp]}"
+)
+[[ -n "${key[Home]}"      ]] && bindkey "${key[Home]}"          beginning-of-line
+[[ -n "${key[End]}"       ]] && bindkey "${key[End]}"           end-of-line
+[[ -n "${key[Insert]}"    ]] && bindkey "${key[Insert]}"        overwrite-mode
+[[ -n "${key[Delete]}"    ]] && bindkey "${key[Delete]}"        delete-char
+[[ -n "${key[PageUp]}"    ]] && bindkey "${key[PageUp]}"        beginning-of-buffer-or-history
+[[ -n "${key[PageDown]}"  ]] && bindkey "${key[PageDown]}"      end-of-buffer-or-history
+[[ -n "${key[Home]}"      ]] && bindkey -M vicmd "${key[Home]}" beginning-of-line
+[[ -n "${key[End]}"       ]] && bindkey -M vicmd "${key[End]}"  end-of-line
+
 # Hit e in command mode to edit current command line.
 autoload -U edit-command-line
 zle -N edit-command-line
