@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ASARFILE=/opt/rambox/resources/app.asar
+ASARFILE=/opt/Rambox/resources/app.asar
 TMPFOLDER=/tmp/rambox_custom_css
 CSSFILE=$TMPFOLDER/resources/Rambox-all.css
 
