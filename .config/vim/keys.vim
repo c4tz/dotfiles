@@ -20,10 +20,10 @@ nmap <Leader>af :Autoformat<CR>
 nmap <Leader>- :split<CR>
 nmap <Leader>. :vsplit<CR>
 nmap <C-G> <C-W>R
-nmap <silent> <ESC>h :TmuxResizeLeft<cr>
-nmap <silent> <ESC>l :TmuxResizeRight<cr>
-nmap <silent> <ESC>j :TmuxResizeDown<cr>
-nmap <silent> <ESC>k :TmuxResizeUp<cr>
+nmap <silent> <ESC>H :TmuxResizeLeft<cr>
+nmap <silent> <ESC>L :TmuxResizeRight<cr>
+nmap <silent> <ESC>J :TmuxResizeDown<cr>
+nmap <silent> <ESC>K :TmuxResizeUp<cr>
 
 " Tabularize shortcuts
 nmap <Leader>t= :Tabularize /=<CR>

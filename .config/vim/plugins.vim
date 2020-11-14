@@ -29,7 +29,7 @@ Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 " tmux
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
-Plug 'melonmanchan/vim-tmux-resizer'
+Plug 'RyanMillerC/better-vim-tmux-resizer'
 " Plug 'benmills/vimux', { 'on': 'VimuxRunCommand' }
 
 call plug#end()
