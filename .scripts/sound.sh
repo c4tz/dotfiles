@@ -5,7 +5,7 @@ if [ $1 = "headset" ]; then
 fi
 
 if [ $1 = "speakers" ]; then
-    pacmd set-card-profile 2 output:analog-surround-21+input:analog-stereo
+    pacmd set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-surround-21+input:analog-stereo
     device="alsa_output.pci-0000_00_1f.3.analog-surround-21"
 fi
 
