@@ -7,6 +7,9 @@ xautolock -time 5 -locker "~/.scripts/lock ~/.scripts/lock.png" &
 # tray-icon for updates
 pamac-tray &
 
+# pw-vault
+keepassxc &
+
 # authentication agent
 /usr/lib/xfce-polkit/xfce-polkit &
 
