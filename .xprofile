@@ -1,26 +1,27 @@
-# networkmanager
-nm-applet &
-
-# auto-lock screen
-xautolock -time 5 -locker "~/.scripts/lock ~/.scripts/lock.png" &
-
-# tray-icon for updates
-pamac-tray &
-
-# pw-vault
-keepassxc &
-
-# authentication agent
-/usr/lib/xfce-polkit/xfce-polkit &
+# status bar
+if [[ "$(cat /etc/hostname)" == *"laptop"* ]]; then polybar top-work & else polybar top & fi
 
 # bspwm fix for jdownloader
 wmname LG3D
 
-# chat client
-rambox &
+# authentication agent
+/usr/lib/xfce-polkit/xfce-polkit &
+
+# auto-lock screen
+xautolock -time 5 -locker "~/.scripts/lock ~/.scripts/lock.png" &
 
 # usenet client daemon
 nzbget -D
 
-# status bar
-if [[ "$(cat /etc/hostname)" == *"laptop"* ]]; then polybar top-work ; else polybar top ; fi
+# networkmanager
+nm-applet &
+
+# tray-icon for updates
+pamac-tray &
+
+# chat client
+rambox &
+
+# keepassxc cannot run in background without a tray yet: https://github.com/keepassxreboot/keepassxc/issues/5547
+sleep 5
+keepassxc &
