@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sleep 5
+
+xset -b
+xmodmap ~/.Xmodmap
+xset r rate 250 50

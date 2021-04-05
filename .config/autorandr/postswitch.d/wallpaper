@@ -1,0 +1,4 @@
+#!/bin/sh
+
+WP=$HOME/Pictures/Wallpapers/leaves.jpg
+feh --bg-fill $WP $WP $WP

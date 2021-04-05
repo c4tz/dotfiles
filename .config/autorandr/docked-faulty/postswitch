@@ -1,0 +1,8 @@
+#!/bin/sh
+
+bspc monitor DisplayPort-5 -d 1 2 3
+bspc monitor HDMI-A-0 -d 4 5 6
+bspc monitor DisplayPort-6 -d 7 8 9
+
+bspc desktop 1 -l monocle
+bspc rule -a Rambox desktop='^7' state=floating rectangle=1060x800+10+1110
