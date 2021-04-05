@@ -5,8 +5,13 @@ if [ $1 = "headset" ]; then
 fi
 
 if [ $1 = "speakers" ]; then
-    pacmd set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-surround-21+input:analog-stereo
-    device="alsa_output.pci-0000_00_1f.3.analog-surround-21"
+    if [[ $(hostname) == 'pc' ]]; then
+        pacmd set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-surround-21+input:analog-stereo
+        device="alsa_output.pci-0000_00_1f.3.analog-surround-21"
+    fi
+    if [[ $(hostname) == 'laptop' ]]; then
+        device="alsa_output.usb-Lenovo_ThinkPad_USB-C_Dock_Gen2_USB_Audio_000000000000-00.analog-stereo"
+    fi
 fi
 
 pacmd set-default-sink $device >/dev/null 2>&1
