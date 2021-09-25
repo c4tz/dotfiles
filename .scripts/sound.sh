@@ -7,7 +7,7 @@ fi
 if [ $1 = "speakers" ]; then
     if [[ $(hostname) == 'pc' ]]; then
         pacmd set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-surround-21+input:analog-stereo
-        device="alsa_output.pci-0000_00_1f.3.analog-surround-21"
+        device="alsa_output.pci-0000_2d_00.4.analog-surround-21"
     fi
     if [[ $(hostname) == 'laptop' ]]; then
         device="alsa_output.usb-Lenovo_ThinkPad_USB-C_Dock_Gen2_USB_Audio_000000000000-00.analog-stereo"
