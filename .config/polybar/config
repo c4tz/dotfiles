@@ -37,7 +37,7 @@ font-1 = "Siji:pixelsize=10;2"
 font-2 = unifont:size=6;1
 font-3 = "Hack Nerd Font:size=8:antialias=false:style=Regular;2"
 
-modules-left = volume traffic fs cpu memory mouse vpn
+modules-left = volume lan fs cpu memory
 modules-center = xwindow
 modules-right = mail crypto music weather date
 
@@ -55,8 +55,7 @@ bspwm-focused-underline = #cc333333
 
 [bar/top-work]
 inherit = bar/top
-modules-left = volume traffic fs cpu memory battery
-modules-right = mail crypto music weather date
+modules-left = volume lan-work fs cpu memory battery wifi
 
 [module/fs]
 type = internal/fs
@@ -96,9 +95,9 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = #666
 
-[module/traffic]
+[module/lan]
 type = internal/network
-interface = eth0
+interface = enp42s0
 interval = 3.0
 
 ping-interval = 3
@@ -107,18 +106,15 @@ label-connected = %{F#666}%{F-}%downspeed:9% %{F#666}%{F-}%upspeed:9%
 format-disconnected = <label-disconnected>
 label-disconnected = not connected
 
+[module/lan-work]
+inherit = module/lan
+interface = eth0
+
 [module/crypto]
 type = custom/script
 interval = 30
 label = %{F#666}%{T4}%{T-}%{F-} %output%
 exec = curl -s "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD" | jq -r '.USD | floor' 2> /dev/null
-
-[module/vpn]
-type = custom/script
-exec = curl -s "http://ip-api.com/json" | jq -r '.country'
-exec-if = pgrep -x openvpn
-interval = 10
-label = %{F#666}%{F-} %output%
 
 [module/weather]
 type = custom/script
@@ -138,13 +134,6 @@ exec = python ~/.scripts/player.py
 exec-if = python ~/.scripts/player.py
 interval = 5
 label = %{F#666}%{F-} %output%
-
-[module/mouse]
-type = custom/script
-exec = python ~/.scripts/mouse.py
-exec-if = python ~/.scripts/mouse.py
-interval = 300
-label = %{F#666}%{F-} %output%
 
 [module/date]
 type = internal/date
