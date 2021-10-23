@@ -33,8 +33,15 @@ export POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
 # History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
-SAVEHIST=10000
+SAVEHIST=$HISTSIZE
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt SHARE_HISTORY
 
+# load zsh plugins
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
