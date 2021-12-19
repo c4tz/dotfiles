@@ -51,11 +51,12 @@ call plug#end()
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --hidden --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, <bang>0)
 
 " ale config
-let g:ale_fixers = {'python': ['black', 'isort']}
+let g:ale_fixers = {'python': ['black', 'isort'], 'go': ['goimports', 'golines']}
 let g:ale_linters = {'python': ['pylint', 'mypy']}
 let g:ale_fix_on_save = 1
 let g:ale_python_black_options = '-l 79'
 let g:ale_python_mypy_options = '--no-strict-optional --disallow-untyped-defs --ignore-missing-imports'
+let g:ale_go_golines_options = '-m 80'
 
 " deoplete config
 let g:deoplete#enable_at_startup = 1
