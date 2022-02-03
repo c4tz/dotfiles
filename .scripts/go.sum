@@ -1,0 +1,6 @@
+github.com/BurntSushi/xgb v0.0.0-20210121224620-deaf085860bc h1:7D+Bh06CRPCJO3gr2F7h1sriovOZ8BMhca2Rg85c2nk=
+github.com/BurntSushi/xgb v0.0.0-20210121224620-deaf085860bc/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
+github.com/disintegration/gift v1.2.1 h1:Y005a1X4Z7Uc+0gLpSAsKhWi4qLtsdEcMIbbdvdZ6pc=
+github.com/disintegration/gift v1.2.1/go.mod h1:Jh2i7f7Q2BM7Ezno3PhfezbR1xpUg9dUg3/RlKGr4HI=
+github.com/vova616/screenshot v0.0.0-20191005130345-da36db2560ab h1:vUMgeWLl6VfXlgjNYPrSZrgEVeLTQygricKsAcJjBZ0=
+github.com/vova616/screenshot v0.0.0-20191005130345-da36db2560ab/go.mod h1:gjlNhAXON0uGGilpsAZpMx5bN1ZVavUlJETHif7w4HQ=
