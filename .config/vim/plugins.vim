@@ -48,7 +48,7 @@ call plug#end()
 """ Plugin configurations
 
 " fzf.vim override
-command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --hidden --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --hidden --line-number --no-heading --color=always --smart-case -g '!**/{.git,node_modules,vendor,.venv,.pyenv}/*' ".shellescape(<q-args>), 1, <bang>0)
 
 " ale config
 let g:ale_fixers = {'python': ['black', 'isort'], 'go': ['goimports', 'golines']}
