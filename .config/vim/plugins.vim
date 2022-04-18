@@ -60,3 +60,4 @@ let g:ale_go_golines_options = '-m 80'
 
 " deoplete config
 let g:deoplete#enable_at_startup = 1
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | silent! pclose | endif
