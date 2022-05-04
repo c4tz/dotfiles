@@ -29,6 +29,8 @@ ctrl + shift + h
     ~/.scripts/sound.sh headset
 ctrl + shift + l
     ~/.scripts/sound.sh speakers
+ctrl + shift + b
+    ~/.scripts/sound.sh bluetooth
 
 # make sxhkd reload its configuration files:
 super + Escape

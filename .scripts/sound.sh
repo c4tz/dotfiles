@@ -4,6 +4,10 @@ if [ $1 = "headset" ]; then
     device="alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_Tactic_3D__Alpha_00069161-00.analog-stereo"
 fi
 
+if [ $1 = "bluetooth" ]; then
+    device="bluez_output.00_1B_66_23_E8_EB.a2dp-sink"
+fi
+
 if [ $1 = "speakers" ]; then
     if [[ $(hostname) == 'pc' ]]; then
         pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-surround-21+input:analog-stereo
