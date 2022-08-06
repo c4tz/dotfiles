@@ -10,7 +10,7 @@ fi
 
 if [ $1 = "speakers" ]; then
     if [[ $(hostname) == 'pc' ]]; then
-        pactl set-card-profile alsa_card.pci-0000_00_1f.3 output:analog-surround-21+input:analog-stereo
+        pactl set-card-profile alsa_card.pci-0000_2d_00.4 output:analog-surround-21+input:analog-stereo
         device="alsa_output.pci-0000_2d_00.4.analog-surround-21"
     fi
     if [[ $(hostname) == 'laptop' ]]; then
@@ -20,7 +20,7 @@ fi
 
 pactl set-default-sink $device >/dev/null 2>&1
 
-for playing in $(pacmd list-sink-inputs | awk '$1 == "index:" {print $2}')
+for playing in $(pactl list sink-inputs | grep "Sink Input #" | sed "s/.*#//")
 do
     pactl move-sink-input $playing $device >/dev/null 2>&1
 done
