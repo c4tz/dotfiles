@@ -9,13 +9,7 @@ if [ $1 = "bluetooth" ]; then
 fi
 
 if [ $1 = "speakers" ]; then
-    if [[ $(hostname) == 'pc' ]]; then
-        pactl set-card-profile alsa_card.pci-0000_2d_00.4 output:analog-surround-21+input:analog-stereo
-        device="alsa_output.pci-0000_2d_00.4.analog-surround-21"
-    fi
-    if [[ $(hostname) == 'laptop' ]]; then
-        device="alsa_output.usb-Lenovo_ThinkPad_USB-C_Dock_Gen2_USB_Audio_000000000000-00.analog-stereo"
-    fi
+    device="alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo"
 fi
 
 pactl set-default-sink $device >/dev/null 2>&1
