@@ -66,7 +66,7 @@ control + super + r
 
 # go into windows
 control + super + w
-    zenity --question --text="Go into Windows?" && sudo grub-reboot Windows && reboot
+    zenity --question --text="Go into Windows?" && systemctl reboot --boot-loader-entry=auto-windows
 
 #
 # bspwm hotkeys
