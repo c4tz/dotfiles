@@ -29,6 +29,7 @@ Plug 'tpope/vim-sensible'
 " syntax, format, linting & autocompletion
 Plug 'Chiel92/vim-autoformat'
 Plug 'deoplete-plugins/deoplete-jedi',          { 'do': 'yay -S python-jedi'}
+Plug 'fatih/vim-go',                            { 'do': ':GoUpdateBinaries' }
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'sheerun/vim-polyglot'
