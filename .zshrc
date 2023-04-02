@@ -9,7 +9,7 @@ autoload -Uz compinit
 compinit
 
 # Env vars
-export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin"
+export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin:$HOME/.cargo/bin"
 export EDITOR='vim'
 export GIT_EDITOR='vim'
 export ARCHFLAGS="-arch x86_64"
