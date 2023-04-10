@@ -5,4 +5,4 @@ xrandr --output HDMI-A-0 --auto --pos 1920x0
 bspc monitor eDP -d 1 2 3 4 5
 bspc monitor HDMI-A-0 -d 6 7 8 9
 bspc desktop 1 -l tiled
-bspc rule -a Rambox desktop='^1' state=floating rectangle=1400x900+260+90
+bspc rule -a Ferdium desktop='^1' state=floating rectangle=1400x900+260+90

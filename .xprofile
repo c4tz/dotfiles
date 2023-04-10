@@ -20,7 +20,7 @@ nm-applet &
 pamac-tray &
 
 # chat client
-rambox &
+ferdium &
 
 # RGB LED Lighting
 if [[ "$(cat /etc/hostname)" == *"pc"* ]]; then openrgb --startminimized --server -p RAM_on & fi

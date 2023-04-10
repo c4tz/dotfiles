@@ -5,4 +5,4 @@ bspc monitor HDMI-A-0 -d 4 5 6
 bspc monitor DisplayPort-4 -d 7 8 9
 
 bspc desktop 1 -l monocle
-bspc rule -a Rambox desktop='^7' state=floating rectangle=1060x800+10+1110
+bspc rule -a Ferdium desktop='^7' state=floating rectangle=1068x951+5+962
