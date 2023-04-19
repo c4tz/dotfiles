@@ -91,7 +91,7 @@ eval "$(direnv hook zsh)"
 
 # auto startx if display is not set
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    exec startx
+    ssh-agent startx
 fi
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
