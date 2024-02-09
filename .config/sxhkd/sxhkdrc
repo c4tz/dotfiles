@@ -24,6 +24,9 @@ super + r
 alt + Tab
     rofi -show window
 
+super + e
+    rofimoji
+
 # sound script
 ctrl + shift + h
     ~/.scripts/sound.sh headset
