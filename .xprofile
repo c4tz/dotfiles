@@ -24,7 +24,3 @@ ferdium &
 
 # RGB LED Lighting
 if [[ "$(cat /etc/hostname)" == *"pc"* ]]; then openrgb --startminimized --server -p RAM_on & fi
-
-# keepassxc cannot run in background without a tray yet: https://github.com/keepassxreboot/keepassxc/issues/5547
-sleep 5
-keepassxc &
