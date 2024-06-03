@@ -29,7 +29,7 @@ for subdir in $folder/*; do
         wname=$(basename $subdir)
         tmux new-window -n $wname -t $name: -c $subdir $cmd
         if [ -v split ]; then
-            tmux split-window -t $name:$wname -c $subdir -p $split 'zsh'
+            tmux split-window -t $name:$wname -c $subdir -l ${split}% 'zsh'
         fi
     fi
 done
