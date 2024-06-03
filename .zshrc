@@ -30,6 +30,8 @@ export POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-remotebranch git-tagna
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(vi_mode virtualenv pyenv dir vcs)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs command_execution_time)
 export POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
+export POWERLEVEL9K_HIDE_BRANCH_ICON=true
+
 
 # History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"

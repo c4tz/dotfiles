@@ -1,0 +1,35 @@
+live_config_reload = true
+
+[colors.primary]
+background = "0x303030"
+foreground = "0xbcbcbc"
+
+[colors.normal]
+black = "0x303030"
+red =  "0xd75f5f"
+green = "0x87af5f"
+yellow = "0xafaf87"
+blue = "0x5fafd7"
+magenta = "0xaf87af"
+cyan = "0x5faf87"
+white = "0x8f8f8f"
+
+[colors.bright]
+black = "0x5d5d5d"
+red =  "0xd75f5f"
+green = "0x87af5f"
+yellow = "0xafaf87"
+blue = "0x5fafd7"
+magenta = "0xaf87af"
+cyan = "0x5faf87"
+white = "0xbcbcbc"
+
+[font]
+size = 8
+
+[font.normal]
+family = "Dina"
+style = "Regular"
+
+[env]
+TERM = "xterm-256color"

@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + t
-    urxvt -e zsh -c tmux
+    alacritty -e zsh -c tmux
 
 # browser
 super + w

@@ -6,7 +6,7 @@
 | Shell | [zsh](https://wiki.archlinux.org/index.php/zsh)
 | Paket Manager | [yay](https://github.com/Jguer/yay)
 | Window Manager | [bspwm](https://wiki.archlinux.org/index.php/bspwm)
-| Terminal      | [urxvt](https://wiki.archlinux.org/index.php/Rxvt-unicode)
+| Terminal      | [alacritty](https://wiki.archlinux.org/title/Alacritty)
 | Multiplexer      | [tmux](https://wiki.archlinux.org/index.php/tmux)
 | File Manager | [pcmanfm](https://wiki.archlinux.org/index.php/PCManFM)
 | Editor      | [vim](https://wiki.archlinux.org/index.php/vim)
