@@ -16,9 +16,6 @@ nzbget -D
 # networkmanager
 nm-applet &
 
-# tray-icon for updates
-pamac-tray &
-
 # chat client
 ferdium &
 
