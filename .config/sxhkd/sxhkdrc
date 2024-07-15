@@ -17,6 +17,10 @@ super + shift + w
 super + f
     pcmanfm
 
+# screenshot tool
+super + s
+    flameshot gui
+
 # program launcher
 super + r
     rofi -show run
