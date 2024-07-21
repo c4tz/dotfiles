@@ -122,12 +122,6 @@ exec = python -W ignore ~/.scripts/weather.py
 interval = 300
 label = %{F#666}%{F-} %output%
 
-[module/mail]
-type = custom/script
-exec = python ~/.scripts/imap.py
-interval = 300
-click-left = thunderbird &
-
 [module/music]
 type = custom/script
 exec = python ~/.scripts/player.py
