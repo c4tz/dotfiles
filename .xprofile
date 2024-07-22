@@ -10,11 +10,11 @@ wmname LG3D
 # auto-lock screen
 xautolock -time 5 -locker "~/.scripts/lock ~/.scripts/lock.png" &
 
-# usenet client daemon
-nzbget -D
-
 # networkmanager
 nm-applet &
+
+# mail client
+thunderbird &
 
 # chat client
 ferdium &
