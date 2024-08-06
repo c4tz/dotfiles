@@ -55,7 +55,7 @@ bspwm-focused-underline = #cc333333
 
 [bar/top-work]
 inherit = bar/top
-modules-left = volume lan-work fs cpu memory battery wifi
+modules-left = volume wifi lan-work fs cpu memory battery
 
 [module/fs]
 type = internal/fs
@@ -79,7 +79,7 @@ format-prefix-foreground = #666
 
 [module/wifi]
 type = internal/network
-interface = wlan0
+interface = wlp3s0
 interval = 3.0
 ;udspeed-minwidth = 0
 
@@ -108,7 +108,7 @@ label-disconnected = not connected
 
 [module/lan-work]
 inherit = module/lan
-interface = eth0
+interface = net1
 
 [module/crypto]
 type = custom/script
