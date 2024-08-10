@@ -3,20 +3,20 @@
 | Software | Choice
 | ------------- |:-------------:
 | OS | [Arch Linux](https://www.archlinux.org/)
-| Shell | [zsh](https://wiki.archlinux.org/index.php/zsh)
+| Shell | [zsh](https://wiki.archlinux.org/title/zsh)
 | Paket Manager | [yay](https://github.com/Jguer/yay)
-| Window Manager | [bspwm](https://wiki.archlinux.org/index.php/bspwm)
+| Window Manager | [bspwm](https://wiki.archlinux.org/title/bspwm)
 | Terminal      | [alacritty](https://wiki.archlinux.org/title/Alacritty)
-| Multiplexer      | [tmux](https://wiki.archlinux.org/index.php/tmux)
-| File Manager | [pcmanfm](https://wiki.archlinux.org/index.php/PCManFM)
-| Editor      | [vim](https://wiki.archlinux.org/index.php/vim)
+| Multiplexer      | [tmux](https://wiki.archlinux.org/title/tmux)
+| File Manager | [pcmanfm](https://wiki.archlinux.org/title/PCManFM)
+| Editor      | [vim](https://wiki.archlinux.org/title/vim)
 | Bar | [polybar](https://github.com/jaagr/polybar)
-| Launcher | [rofi](https://wiki.archlinux.org/index.php/rofi)
-| Browser | [chromium](https://wiki.archlinux.org/index.php/chromium)
+| Launcher | [rofi](https://wiki.archlinux.org/title/rofi)
+| Browser | [chromium](https://wiki.archlinux.org/title/chromium)
 | Chat | [ferdium](https://github.com/ferdium/ferdium-app)
-| Mail | [thunderbird](https://wiki.archlinux.org/index.php/thunderbird)
-| Compositor | [compton](https://wiki.archlinux.org/index.php/compton)
-| Media | [vlc](https://wiki.archlinux.org/index.php/VLC_media_player)
+| Mail | [thunderbird](https://wiki.archlinux.org/title/thunderbird)
+| Compositor | [compton](https://wiki.archlinux.org/title/compton)
+| Media | [vlc](https://wiki.archlinux.org/title/VLC_media_player)
 
 ## Installation
 
