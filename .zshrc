@@ -32,6 +32,14 @@ export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs
 export POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
 export POWERLEVEL9K_HIDE_BRANCH_ICON=true
 
+# Nvidia specific Firefox vars for HW acceleration,
+# see https://github.com/elFarto/nvidia-vaapi-driver#firefox
+if [[ $(hostname) == 'pc' ]]; then
+  export MOZ_X11_EGL=1
+  export MOZ_DISABLE_RDD_SANDBOX=1
+  export LIBVA_DRIVER_NAME=nvidia
+  export __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json
+fi
 
 # History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
