@@ -7,7 +7,6 @@ fi
 
 # x settings
 xsetroot -cursor_name left_ptr &
-xrdb -merge "$HOME/.Xresources"
 ~/.config/autorandr/postswitch.d/keyboard &
 
 # make qt5 apps use gtk theme
@@ -18,6 +17,6 @@ xset +fp ~/.fonts/dina-powerline
 xset fp rehash
 
 # wm stuff
-picom -CG --no-fading-openclose --experimental-backends &
+picom --no-fading-openclose --backend=xrender --no-sync &
 sxhkd &
 bspwm
