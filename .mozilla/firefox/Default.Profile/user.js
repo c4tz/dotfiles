@@ -237,6 +237,7 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 user_pref("media.ffmpeg.vaapi.enabled", true);
 user_pref("browser.startup.page", 3);
 user_pref("browser.uidensity", 1);
+user_pref("media.eme.enabled", true);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
