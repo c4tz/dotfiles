@@ -238,6 +238,8 @@ user_pref("media.ffmpeg.vaapi.enabled", true);
 user_pref("browser.startup.page", 3);
 user_pref("browser.uidensity", 1);
 user_pref("media.eme.enabled", true);
+user_pref("signon.autofillForms", false);
+user_pref("signon.rememberSignons", false);
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
