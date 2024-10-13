@@ -15,6 +15,7 @@ export GIT_EDITOR='vim'
 export ARCHFLAGS="-arch x86_64"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g ""'
 export ZLE_RPROMPT_INDENT=0
+export GTK_THEME=Adwaita:dark
 
 export POWERLEVEL9K_FAIL_ICON=x
 export POWERLEVEL9K_STATUS_OK=false
