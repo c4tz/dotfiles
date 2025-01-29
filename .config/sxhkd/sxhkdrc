@@ -32,12 +32,15 @@ super + e
     rofimoji
 
 # sound script
-ctrl + shift + h
-    ~/.scripts/sound.sh headset
-ctrl + shift + l
-    ~/.scripts/sound.sh speakers
-ctrl + shift + b
-    ~/.scripts/sound.sh bluetooth
+ctrl + shift + {h,l,b}
+    ~/.scripts/sound.sh {headset,speakers,bluetooth}
+
+# webcam
+ctrl + shift + {numbersign}
+    ~/.scripts/webcam.sh default
+
+ctrl + shift + {plus,minus}
+    ~/.scripts/webcam.sh gain {increase,decrease}
 
 # make sxhkd reload its configuration files:
 super + Escape

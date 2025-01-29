@@ -1,7 +1,6 @@
 #!/bin/sh
 
-sleep 5
-
+setxkbmap -layout de -variant nodeadkeys # needed for sxhkd
 xset -b
 xmodmap ~/.Xmodmap
 xset r rate 250 50

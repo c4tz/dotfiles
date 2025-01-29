@@ -7,7 +7,7 @@ fi
 
 # x settings
 xsetroot -cursor_name left_ptr &
-~/.config/autorandr/postswitch.d/keyboard &
+~/.config/autorandr/postswitch.d/keyboard
 
 # make qt5 apps use gtk theme
 export QT_QPA_PLATFORMTHEME=gtk2
