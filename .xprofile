@@ -1,5 +1,9 @@
 # status bar
-if [[ "$(cat /etc/hostname)" == *"laptop"* ]]; then polybar top-work & else polybar top & fi
+if [[ "$(cat /etc/hostname)" == *"laptop"* ]]; then
+    polybar top-work &
+else
+    polybar top &
+fi
 
 # bspwm fix for jdownloader
 wmname LG3D
@@ -20,4 +24,6 @@ thunderbird &
 ferdium &
 
 # RGB LED Lighting
-if [[ "$(cat /etc/hostname)" == *"pc"* ]]; then openrgb --startminimized --server -p RAM_on & fi
+if [[ "$(cat /etc/hostname)" == *"pc"* ]]; then
+    openrgb --startminimized --server -p RAM_on &
+fi
