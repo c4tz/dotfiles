@@ -13,7 +13,7 @@ export PATH="$PATH:$HOME/go/bin:$HOME/.local/bin:$HOME/.cargo/bin"
 export EDITOR='vim'
 export GIT_EDITOR='vim'
 export ARCHFLAGS="-arch x86_64"
-export FZF_DEFAULT_COMMAND='rg --files --hidden -g ""'
+export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!**/{.git,node_modules,vendor,.venv,.pyenv}/*'"
 export ZLE_RPROMPT_INDENT=0
 export GTK_THEME=Adwaita:dark
 
