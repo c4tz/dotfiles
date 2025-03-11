@@ -28,12 +28,13 @@ Plug 'tpope/vim-sensible'
 
 " syntax, format, linting & autocompletion
 Plug 'Chiel92/vim-autoformat'
-Plug 'deoplete-plugins/deoplete-jedi',          { 'do': 'yay -S python-jedi'}
 Plug 'fatih/vim-go',                            { 'do': ':GoUpdateBinaries' }
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-buffer.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/vim-lsp',                  { 'do': 'yay -S python-lsp-server'}
 Plug 'sheerun/vim-polyglot'
-Plug 'Shougo/deoplete.nvim',                    { 'do': 'yay -S python-pynvim'}
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': 'NERDTreeToggle' }
 Plug 'w0rp/ale'
 
@@ -42,7 +43,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
 Plug 'RyanMillerC/better-vim-tmux-resizer'
 Plug 'tmux-plugins/vim-tmux-focus-events'
-" Plug 'benmills/vimux', { 'on': 'VimuxRunCommand' }
 
 call plug#end()
 
@@ -59,6 +59,10 @@ let g:ale_python_black_options = '-l 79'
 let g:ale_python_mypy_options = '--no-strict-optional --disallow-untyped-defs --ignore-missing-imports'
 let g:ale_go_golines_options = '-m 80'
 
-" deoplete config
-let g:deoplete#enable_at_startup = 1
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | silent! pclose | endif
+" buffer autocomplete config
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+    \ 'name': 'buffer',
+    \ 'allowlist': ['*'],
+    \ 'blocklist': [],
+    \ 'completor': function('asyncomplete#sources#buffer#completor')
+    \ }))
