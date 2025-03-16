@@ -23,8 +23,10 @@ Plug 'godlygeek/tabular'
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 Plug 'Raimondi/delimitMate'
+Plug 'romainl/vim-cool'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 
 " syntax, format, linting & autocompletion
 Plug 'Chiel92/vim-autoformat'
