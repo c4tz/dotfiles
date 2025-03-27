@@ -112,7 +112,7 @@ interface = net1
 
 [module/crypto]
 type = custom/script
-interval = 30
+interval = 300
 label = %{F#666}%{T4}%{T-}%{F-} %output%
 exec = curl -s "https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD" | jq -r '.USD | floor' 2> /dev/null
 
