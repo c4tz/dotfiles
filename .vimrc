@@ -36,6 +36,10 @@ let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 " automatically set same size for splits on window resize
 autocmd VimResized * wincmd =
 
+" custom syntax highlighting
+autocmd BufRead,BufNewFile *.yaml.gotmpl set filetype=yaml
+autocmd BufRead,BufNewFile *.yml.gotmpl set filetype=yaml
+
 " Airline setup
 set laststatus=2
 let g:airline_powerline_fonts = 1
