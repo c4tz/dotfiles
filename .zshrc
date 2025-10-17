@@ -16,6 +16,7 @@ export ARCHFLAGS="-arch x86_64"
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!**/{.git,node_modules,vendor,.venv,.pyenv}/*'"
 export ZLE_RPROMPT_INDENT=0
 export GTK_THEME=Adwaita:dark
+export ADW_DISABLE_PORTAL=1
 
 export POWERLEVEL9K_FAIL_ICON=x
 export POWERLEVEL9K_STATUS_OK=false
