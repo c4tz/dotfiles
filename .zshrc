@@ -16,7 +16,9 @@ export ARCHFLAGS="-arch x86_64"
 export FZF_DEFAULT_COMMAND="rg --files --hidden -g '!**/{.git,node_modules,vendor,.venv,.pyenv}/*'"
 export ZLE_RPROMPT_INDENT=0
 export GTK_THEME=Adwaita:dark
+export QT_STYLE_OVERRIDE=Adwaita-Dark
 export ADW_DISABLE_PORTAL=1
+export NIRI_CONFIG=".config/niri/$(hostname).kdl"
 
 export POWERLEVEL9K_FAIL_ICON=x
 export POWERLEVEL9K_STATUS_OK=false
@@ -37,10 +39,9 @@ export POWERLEVEL9K_HIDE_BRANCH_ICON=true
 # Nvidia specific Firefox vars for HW acceleration,
 # see https://github.com/elFarto/nvidia-vaapi-driver#firefox
 if [[ $(hostname) == 'pc' ]]; then
-  export MOZ_X11_EGL=1
   export MOZ_DISABLE_RDD_SANDBOX=1
-  export LIBVA_DRIVER_NAME=nvidia
-  export __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json
+  export GBM_BACKEND=nvidia-drm
+  export __GLX_VENDOR_LIBRARY_NAME=nvidia
 fi
 
 # History file configuration
@@ -103,7 +104,8 @@ eval "$(direnv hook zsh)"
 
 # auto startx if display is not set
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    ssh-agent startx
+    # ssh-agent startx
+    ssh-agent niri-session
 fi
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

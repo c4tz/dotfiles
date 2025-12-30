@@ -1,0 +1,195 @@
+// -*- mode: jsonc -*-
+{
+    "height": 22,
+    "spacing": 4,
+    // small hack to either display on all monitors (default) or
+    // on the largest, see .scripts/primary.sh
+    "output": "!REPLACEME",
+    "reload_style_on_change": true,
+    "modules-left": [
+        "pulseaudio#icon",
+        "pulseaudio",
+        "custom/icon-network-down",
+        "network",
+        "custom/icon-network-up",
+        "network#up",
+        "custom/icon-disk",
+        "disk",
+        "custom/icon-cpu",
+        "cpu",
+        "custom/icon-memory",
+        "memory",
+        "backlight#icon",
+        "backlight",
+        "battery#icon",
+        "battery",
+    ],
+    "modules-center": [
+        "niri/window"
+    ],
+    "modules-right": [
+        "mpris#icon",
+        "mpris",
+        "custom/icon-crypto",
+        "custom/crypto",
+        "custom/icon-weather",
+        "custom/weather",
+        "custom/icon-date",
+        "custom/date",
+        "custom/icon-time",
+        "custom/time",
+        "tray",
+    ],
+    // Modules configuration
+    "pulseaudio#icon": {
+        "scroll-step": 5,
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": {
+            "bluez_output.00_1B_66_23_E8_EB.1": "",
+            "alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_Tactic_3D__Alpha_00069161-00.analog-stereo": "",
+            "default": "",
+        },
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": false,
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}%",
+        "format-muted": "<span foreground='#666'>muted</span>",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": false,
+    },
+    "custom/icon-network-down": {
+        "format": "",
+        "tooltip": false,
+    },
+    "network": {
+        "format": "{bandwidthDownBytes:>}",
+        "format-disconnected": "<span foreground='#666'>Disconnected</span>",
+        "interval": 3,
+        "tooltip": false,
+    },
+    "custom/icon-network-up": {
+        "format": "",
+        "tooltip": false,
+    },
+    "network#up": {
+        "format": "{bandwidthUpBytes:>}",
+        "format-disconnected": "",
+        "interval": 3,
+        "tooltip": false,
+    },
+    "custom/icon-disk": {
+        "format": "",
+        "tooltip": false,
+    },
+    "disk": {
+        "format": "{specific_free:0.0f} GB",
+        "unit": "GiB",
+        "tooltip": false,
+    },
+    "custom/icon-memory": {
+        "format": "",
+        "tooltip": false,
+    },
+    "memory": {
+        "format": "{}%",
+        "tooltip": false,
+    },
+    "custom/icon-cpu": {
+        "format": "",
+        "tooltip": false,
+    },
+    "cpu": {
+        "format": "{usage}%",
+        "tooltip": false,
+    },
+    "backlight#icon": {
+        "format": "{icon}",
+        "format-icons": ["", "", ""],
+        "tooltip": false,
+    },
+    "backlight": {
+        "format": "{percent}%",
+        "tooltip": false,
+    },
+    "battery#icon": {
+        "states": {
+            "warning": 15,
+        },
+        "format": "{icon}",
+        "format-warning": "{icon}!",
+        "format-charging": "",
+        "format-plugged": "",
+        "format-icons": ["", "", ""],
+        "tooltip": false,
+    },
+    "battery": {
+        "format": "{capacity}%",
+        "format-charging": "{capacity}% ({time})",
+        "tooltip": false,
+    },
+    "niri/window": {
+        "tooltip": false,
+    },
+    "mpris#icon": {
+        "format": "",
+        "format-paused": "",
+        "tooltip": false,
+    },
+    "mpris": {
+        "format": "{dynamic}",
+        "format-paused": "<span foreground='#666'>{dynamic}</span>",
+        "dynamic-order": ["title", "artist"],
+        "tooltip": false,
+    },
+    "custom/icon-crypto": {
+        "format": "",
+        "tooltip": false,
+    },
+    "custom/crypto": {
+        "format": "{text}",
+        "exec": "curl -s 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD' | jq -r '.USD | floor' 2> /dev/null",
+        "interval": 300,
+        "return-type": "text",
+        "tooltip": false,
+    },
+    "custom/icon-weather": {
+        "format": "",
+        "tooltip": false,
+    },
+    "custom/weather": {
+        "format": "{text}",
+        "exec": "python $HOME/.scripts/weather.py",
+        "interval": 900,
+        "return-type": "text",
+        "tooltip": false,
+    },
+    "custom/icon-date": {
+        "format": "",
+        "tooltip": false,
+    },
+    "custom/date": {
+        "format": "{text}",
+        "exec": "date '+%d.%m.%Y'",
+        "interval": 30,
+        "return-type": "text",
+        "tooltip": false,
+    },
+    "custom/icon-time": {
+        "format": "",
+        "tooltip": false,
+    },
+    "custom/time": {
+        "format": "{text} ",
+        "exec": "date '+%H:%M'",
+        "interval": 30,
+        "return-type": "text",
+        "tooltip": false,
+    },
+    "tray": {
+        "icon-size": 8,
+        "spacing": 6,
+    },
+}
