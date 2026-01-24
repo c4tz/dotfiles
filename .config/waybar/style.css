@@ -1,0 +1,49 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    /* font-family: Hack Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif; */
+    /* font-size: 12px; */
+    font-family: Dina;/*, FontAwesome, Roboto, Helvetica, Arial, sans-serif;*/
+    font-size: 9px;
+}
+
+window#waybar {
+    background-color: #222;
+    border-bottom: 2px solid #333;
+    color: #eee;
+}
+
+window#waybar>box {
+    padding-left: 4px;
+    padding-right: 6px;
+}
+
+#custom-icon-cpu,
+#custom-icon-disk,
+#custom-icon-memory,
+#custom-icon-network-down,
+#custom-icon-network-up,
+#custom-icon-music,
+#custom-icon-crypto,
+#custom-icon-weather,
+#custom-icon-date,
+#custom-icon-time,
+#mpris.icon,
+#battery.icon,
+#backlight.icon,
+#pulseaudio.icon {
+    font-family: Siji;
+    font-size: 10px;
+    color: #666;
+    padding-top: 2px;
+}
+
+#custom-icon-crypto {
+    font-family: Hack;
+    font-size: 11px;
+    color: #666;
+}
+
+#custom-icon-weather,
+#custom-icon-crypto {
+    padding-top: 0px;
+}
