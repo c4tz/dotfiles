@@ -1,0 +1,52 @@
+output "LG Electronics LG ULTRAGEAR 409NTMX6Z267" {
+    mode 2560x1440@180.063
+    position 1080,200
+    alias $HOME_1
+}
+output "Samsung Electric Company LF24T450F H4ZR101725" {
+    mode 1920x1080@60.000
+    transform 270
+    position 3640,0
+    alias $HOME_2
+}
+output "Samsung Electric Company LF24T450F H4ZR101722" {
+    mode 1920x1080@60.000
+    transform 90
+    position 0,0
+    alias $HOME_3
+}
+
+output "eDP-1" {
+    mode 1920x1080@60.010
+}
+
+output "HDMI-A-1" {}
+
+profile pc {
+  output $HOME_1 enable
+  output $HOME_2 enable
+  output $HOME_3 enable
+  exec $HOME/.scripts/primary.sh waybar
+  exec swayidle -C $HOME/.config/swayidle/home
+}
+
+profile laptop {
+  output eDP-1 enable
+  exec swayidle -C $HOME/.config/swayidle/elsewhere
+}
+
+profile laptop_docked {
+  output eDP-1 disable
+  output $HOME_1 enable mode 2560x1440@143.991
+  output $HOME_2 enable
+  output $HOME_3 enable
+  exec $HOME/.scripts/primary.sh waybar
+  exec swayidle -C $HOME/.config/swayidle/home
+}
+
+profile laptop_cable {
+  output eDP-1 enable
+  output HDMI-A-1 enable
+  exec $HOME/.scripts/primary.sh waybar
+  exec swayidle -C $HOME/.config/swayidle/elsewhere
+}

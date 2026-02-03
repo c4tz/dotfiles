@@ -1,0 +1,5 @@
+include "common.kdl"
+
+// PC specific config
+
+spawn-at-startup "openrgb" "--startminimized" "--server" "-p" "RAM_on"

@@ -5,7 +5,7 @@ if [ $1 = "headset" ]; then
 fi
 
 if [ $1 = "bluetooth" ]; then
-    device="bluez_output.00_1B_66_23_E8_EB.1"
+    device="bluez_output.00:1B:66:23:E8:EB"
 fi
 
 if [ $1 = "speakers" ]; then

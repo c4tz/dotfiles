@@ -1,0 +1,5 @@
+timeout 300 'loginctl lock-session'
+timeout 600 'niri msg action power-off-monitors'
+timeout 1200 'systemctl suspend'
+after-resume 'loginctl lock-session'
+lock '~/.scripts/primary.sh hyprlock'

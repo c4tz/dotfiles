@@ -20,6 +20,7 @@ Plug 'airblade/vim-rooter'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'chrisbra/SudoEdit.vim',                   { 'on': 'SudoWrite' }
 Plug 'godlygeek/tabular'
+Plug 'jasonccox/vim-wayland-clipboard'
 Plug 'junegunn/fzf.vim'
 Plug 'pbogut/fzf-mru.vim'
 Plug 'Raimondi/delimitMate'
@@ -31,6 +32,7 @@ Plug 'tpope/vim-surround'
 " syntax, format, linting & autocompletion
 Plug 'Chiel92/vim-autoformat'
 Plug 'fatih/vim-go',                            { 'do': ':GoUpdateBinaries' }
+Plug 'imsnif/kdl.vim'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-buffer.vim'

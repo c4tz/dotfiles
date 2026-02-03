@@ -1,0 +1,56 @@
+xkb_keymap {
+    xkb_keycodes { include "evdev+aliases(qwerty)" };
+    xkb_types    { include "complete" };
+    xkb_compat   { include "complete" };
+
+    xkb_symbols "custom" {
+        include "pc+de(nodeadkeys)+inet(evdev)"
+
+        replace key <CAPS> {
+            type[Group1] = "ONE_LEVEL",
+            symbols[Group1] = [ ISO_Level3_Shift ]
+        };
+
+        override key <AC06> {
+            type[Group1] = "FOUR_LEVEL_ALPHABETIC",
+            symbols[Group1] = [ h, H, Left, Left ]
+        };
+        override key <AC07> {
+            type[Group1] = "FOUR_LEVEL_ALPHABETIC",
+            symbols[Group1] = [ j, J, Down, Down ]
+        };
+        override key <AC08> {
+            type[Group1] = "FOUR_LEVEL_ALPHABETIC",
+            symbols[Group1] = [ k, K, Up, Up ]
+        };
+        override key <AC09> {
+            type[Group1] = "FOUR_LEVEL_ALPHABETIC",
+            symbols[Group1] = [ l, L, Right, Right ]
+        };
+
+        override key <AC01> {
+            type[Group1] = "FOUR_LEVEL_ALPHABETIC",
+            symbols[Group1] = [ a, A, Home, Home ]
+        };
+        override key <AC03> {
+            type[Group1] = "FOUR_LEVEL_ALPHABETIC",
+            symbols[Group1] = [ d, D, End, End ]
+        };
+
+        override key <AD02> {
+            type[Group1] = "FOUR_LEVEL_ALPHABETIC",
+            symbols[Group1] = [ w, W, Prior, Prior ]
+        };
+        override key <AC02> {
+            type[Group1] = "FOUR_LEVEL_ALPHABETIC",
+            symbols[Group1] = [ s, S, Next, Next ]
+        };
+
+        override key <BKSP> {
+            type[Group1] = "FOUR_LEVEL",
+            symbols[Group1] = [ BackSpace, BackSpace, Delete, Delete ]
+        };
+    };
+
+    xkb_geometry { include "pc(pc105)" };
+};
