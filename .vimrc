@@ -37,8 +37,8 @@ let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
 autocmd VimResized * wincmd =
 
 " custom syntax highlighting
-autocmd BufRead,BufNewFile *.yaml.gotmpl set filetype=yaml
-autocmd BufRead,BufNewFile *.yml.gotmpl set filetype=yaml
+autocmd BufRead,BufNewFile *.yaml.gotmpl set filetype=helm
+autocmd BufRead,BufNewFile *.yml.gotmpl set filetype=helm
 
 " Airline setup
 set laststatus=2
