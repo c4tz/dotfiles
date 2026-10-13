@@ -51,5 +51,5 @@ fi
 if [ -z ${TMUX+x} ]; then
     tmux attach -t $name
 else
-    tmux switch -t $name
+    tmux switch-client -t $name
 fi
